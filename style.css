@@ -1,3 +1,36 @@
-html {
+* {
+  box-sizing: border-box;
+  margin: 0;
   scroll-behavior: smooth;
 }
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 20px;
+    padding-top: 40px;
+    background-color: #09090B;
+    height: 100px;
+    width: auto;
+    color: white;
+    font-size: 20px;
+}
+.link{
+   color: white;
+    text-decoration: none;
+    transition: transform 0.2s ease, color 0.2s ease;
+    
+}
+.link:hover{
+    color: green;
+    cursor: pointer;
+    transform: translateY(-3px);
+
+}
+.MenuBar{
+    display: flex;
+    gap: 20px;
+    padding-right: 20px;
+}
+
