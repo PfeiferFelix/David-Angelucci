@@ -8,29 +8,282 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-left: 20px;
-    padding-top: 40px;
+    padding: 0 40px;
     background-color: #09090B;
-    height: 100px;
-    width: auto;
-    color: white;
-    font-size: 20px;
+    height: 70px;
+    width: 100%;
 }
-.link{
-   color: white;
-    text-decoration: none;
-    transition: transform 0.2s ease, color 0.2s ease;
-    
-}
-.link:hover{
-    color: green;
-    cursor: pointer;
-    transform: translateY(-3px);
 
-}
-.MenuBar{
+.logo {
     display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo img {
+    height: 32px;
+    width: auto;
+}
+
+.logo-text {
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: 0.05em;
+}
+
+.MenuBar {
+    display: flex;
+    gap: 32px;
+    align-items: center;
+}
+
+.link {
+    color: #a1a1aa;
+    text-decoration: none;
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    padding-bottom: 4px;
+    position: relative;
+    transition: color 0.2s ease;
+}
+
+.link::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #22c55e;
+    transform: scaleX(0);
+    transition: transform 0.2s ease;
+}
+
+.link:hover {
+    color: #22c55e;
+    cursor: pointer;
+}
+
+.link:hover::after {
+    transform: scaleX(1);
+}
+
+/* My Services */
+.myServices {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 100px 40px;
+    background-color: rgb(24,24,26);
+    font-family: Arial, Helvetica, sans-serif;
     gap: 20px;
-    padding-right: 20px;
+}
+
+.myServices h2 {
+    color: white;
+    font-size: 40px;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+}
+
+.myServices span {
+    color: #a1a1aa;
+    font-size: 16px;
+    line-height: 1.6;
+    max-width: 520px;
+}
+
+.showServices {
+    margin-top: 8px;
+    padding: 14px 28px;
+    background-color: #22c55e;
+    color: white;
+    font-size: 15px;
+    font-weight: 600;
+    font-family: Arial, Helvetica, sans-serif;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease;
+    letter-spacing: 0.01em;
+}
+
+.showServices .arrow {
+    display: inline-block;
+    transition: transform 0.2s ease;
+}
+
+.showServices:hover .arrow {
+    transform: translateX(4px);
+}
+
+.showServices:hover {
+   background-color: #16a34a;
+    transform: translateY(-1px);
+    box-shadow: 0 0 24px rgba(34, 197, 94, 0.9), 0 0 48px rgba(34, 197, 94, 0.5);
+}
+
+/* Ready Project */
+.readyProject {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 100px 40px;
+    background-color: #09090B;
+    font-family: Arial, Helvetica, sans-serif;
+    gap: 20px;
+}
+
+.readyProject h2 {
+    color: white;
+    font-size: 40px;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+}
+
+.readyProject > span {
+    color: #d4d4d8;
+    font-size: 16px;
+    line-height: 1.6;
+    max-width: 520px;
+}
+.BeratungsgesprächText{
+    color: #a1a1aa;
+}
+
+.kontakt {
+    margin-top: 8px;
+    padding: 14px 28px;
+    background-color: #22c55e;
+    color: white;
+    font-size: 15px;
+    font-weight: 600;
+    font-family: Arial, Helvetica, sans-serif;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease;
+    letter-spacing: 0.01em;
+}
+
+.kontakt:hover {
+    background-color: #16a34a;
+    transform: translateY(-1px);
+    box-shadow: 0 0 24px rgba(34, 197, 94, 0.9), 0 0 48px rgba(34, 197, 94, 0.5);
+}
+
+.kontakt .arrow {
+    display: inline-block;
+    transition: transform 0.2s ease;
+}
+
+.kontakt:hover .arrow {
+    transform: translateX(4px);
+}
+
+/* Footer */
+footer {
+    background-color: rgb(24,24,26);
+    padding: 60px 40px 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #a1a1aa;
+}
+
+.footer-top {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    padding-bottom: 40px;
+}
+
+.footer-brand {
+    max-width: 320px;
+}
+
+.footer-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 16px;
+}
+
+.footer-logo img {
+    height: 28px;
+    width: auto;
+}
+
+.footer-logo-text {
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.footer-desc {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #a1a1aa;
+}
+
+.footer-heading {
+    color: white;
+    font-size: 15px;
+    font-weight: 600;
+    margin-bottom: 16px;
+}
+
+.footer-links {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.footer-link {
+    color: #a1a1aa;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.2s ease;
+}
+
+.footer-link:hover {
+    color: #22c55e;
+}
+
+.footer-socials {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.footer-legal {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.footer-kontakt {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.footer-kontakt p {
+    font-size: 14px;
+}
+
+.footer-divider {
+    border-top: 1px solid #27272a;
+    margin-bottom: 24px;
+}
+
+.footer-bottom {
+    text-align: center;
+    font-size: 13px;
+    color: #71717a;
 }
 
