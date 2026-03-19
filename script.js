@@ -14,3 +14,25 @@ function showPopup(event) {
 function closePopup() {
     document.getElementById('successPopup').classList.remove('active');
 }
+
+//Formspree
+document.querySelector('.kontakt-form').addEventListener('submit', async function(event) {
+    event.preventDefault();
+    const response = await fetch('https://formspree.io/f/mkoqykaw', {
+        method: 'POST',
+        body: new FormData(this),
+        headers: { 'Accept': 'application/json' }
+    });
+    if (response.ok) {
+        showPopup();
+        this.reset();
+    }
+});
+
+function showPopup() {
+    document.getElementById('successPopup').style.display = 'flex';
+}
+
+function closePopup() {
+    document.getElementById('successPopup').style.display = 'none';
+}
