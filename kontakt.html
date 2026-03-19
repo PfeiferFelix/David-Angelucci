@@ -6,6 +6,7 @@
     <title>David Angelucci</title>
     <script src="./script.js"></script>
     <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./kontakt.css">
 </head>
 <body>
     <header>
@@ -20,8 +21,136 @@
             <a class="link active" href="./kontakt.html">Kontakt</a>
         </nav>
     </header>
+
     <main>
+        <div class="KontaktSectionHead">
+            <h2 class="headlineKontakt">Kontaktiere mich</h2>
+            <span class="kontaktText">Lass uns über dein Projekt sprechen. Ich freu mich über deine Nachricht.</span>
+        </div>
+
+        <div class="kontakt-grid">
+            <!-- Left: Form -->
+            <div class="kontakt-form-card">
+                <h3 class="form-title">Anfrage senden</h3>
+                <form class="kontakt-form">
+                    <div class="form-group">
+                        <label>Name *</label>
+                        <input type="text" placeholder="Dein Name">
+                    </div>
+                    <div class="form-group">
+                        <label>Email *</label>
+                        <input type="email" placeholder="deine@email.com">
+                    </div>
+                    <div class="form-group">
+                        <label>Telefon</label>
+                        <input type="tel" placeholder="+43 123 456 789">
+                    </div>
+                    <div class="form-group">
+                        <label>Service *</label>
+                        <select>
+                            <option value="" disabled selected>Bitte auswählen</option>
+                            <option>Hochzeitsvideo</option>
+                            <option>Unternehmensvideo</option>
+                            <option>Eventfilm</option>
+                            <option>Sonstiges</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Gewünschter Termin</label>
+                        <input type="date" placeholder="tt.mm.jjjj">
+                    </div>
+                    <div class="form-group">
+                        <label>Nachricht *</label>
+                        <textarea placeholder="Erzähle mir mehr über dein Projekt..."></textarea>
+                    </div>
+                    <button type="submit" class="form-submit">
+                        Nachricht senden
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="22" y1="2" x2="11" y2="13"></line>
+                            <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                        </svg>
+                    </button>
+                    <p class="form-note">* Pflichtfelder. Ich antworte in der Regel innerhalb von 24 Stunden.</p>
+                </form>
+            </div>
+
+            <!-- Right: Info cards -->
+            <div class="kontakt-info">
+                <div class="cardE-Mail info-card">
+                    <img class="info-icon-img" src="./images/SCR-20260311-owki.png" alt="Email">
+                    <div class="info-text">
+                        <span class="info-label">Email</span>
+                        <span class="info-value">info@angeluccifilmmedia.at</span>
+                    </div>
+                </div>
+
+                <div class="cardTelefon info-card">
+                    <img class="info-icon-img" src="./images/SCR-20260311-ownb.png" alt="Telefon">
+                    <div class="info-text">
+                        <span class="info-label">Telefon</span>
+                        <span class="info-value">+43 123 456 789</span>
+                    </div>
+                </div>
+
+                <div class="cardStandort info-card">
+                    <img class="info-icon-img" src="./images/SCR-20260311-owpw.png" alt="Standort">
+                    <div class="info-text">
+                        <span class="info-label">Standort</span>
+                        <span class="info-value">Österreich</span>
+                    </div>
+                </div>
+
+                <div class="cardVerfügbarkeit">
+                    <span class="verfug-title">Verfügbarkeit</span>
+                    <div class="verfug-row">
+                        <span class="verfug-day">Montag – Freitag:</span>
+                        <span class="verfug-time">9:00 – 18:00</span>
+                    </div>
+                    <div class="verfug-row">
+                        <span class="verfug-day">Samstag:</span>
+                        <span class="verfug-time">Nach Vereinbarung</span>
+                    </div>
+                    <div class="verfug-row last">
+                        <span class="verfug-day">Sonntag:</span>
+                        <span class="verfug-time">Nach Vereinbarung</span>
+                    </div>
+                </div>
+
+                <div class="cardQuestions">
+                    <span class="faq-title">Häufige Fragen</span>
+                    <span class="faq-text">Besuche meine Services-Seite für Antworten auf häufig gestellte Fragen zu Preisen, Ablauf und mehr.</span>
+                    <a href="./services.html">Zu den Services →</a>
+                </div>
+            </div>
+        </div>
+        <div class="testimonials">
+            <h2>Was Kunden sagen</h2>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <p class="testimonial-quote">"Absolut begeistert! Die Videos sind wunderschön und haben unsere Hochzeit perfekt eingefangen. Jedes Mal wenn wir sie anschauen, kommen die Emotionen zurück."</p>
+                    <div class="testimonial-author">
+                        <span class="author-name">Anna &amp; Thomas</span>
+                        <span class="author-type">Hochzeitsvideo</span>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <p class="testimonial-quote">"Professionell, kreativ und pünktlich. Das Video hat unsere Erwartungen übertroffen und wird von unseren Kunden sehr gut angenommen."</p>
+                    <div class="testimonial-author">
+                        <span class="author-name">TechStart GmbH</span>
+                        <span class="author-type">Imagevideo</span>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <p class="testimonial-quote">"Der schönste Moment unseres Lebens wurde so diskret und professionell festgehalten. Ein Video, das wir für immer schätzen werden!"</p>
+                    <div class="testimonial-author">
+                        <span class="author-name">Laura &amp; Michael</span>
+                        <span class="author-type">Verlobungsvideo</span>
+                    </div>
+                </div>
+            </div>
+        </div>
     </main>
+
     <footer>
         <div class="footer-top">
             <div class="footer-brand">
