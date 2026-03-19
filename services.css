@@ -1,0 +1,349 @@
+/* Services Page Hero */
+.services-hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 100px 40px 80px;
+    background-color: #09090B;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.services-hero h1 {
+    color: white;
+    font-size: 64px;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    line-height: 1.1;
+    margin-bottom: 24px;
+}
+
+/* Service Cards */
+.service-cards {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    padding: 0 40px 100px;
+    background-color: #09090B;
+    font-family: Arial, Helvetica, sans-serif;
+    flex-wrap: wrap;
+}
+
+.service-card {
+    background-color: #18181b;
+    border: 1px solid #27272a;
+    border-radius: 16px;
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 340px;
+    flex-shrink: 0;
+}
+
+
+.service-card-top {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+.service-icon {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+    margin-bottom: 20px;
+}
+
+.service-card h2 {
+    color: white;
+    font-size: 22px;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+    margin-bottom: 10px;
+}
+
+.service-desc {
+    color: #71717a;
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: 24px;
+}
+
+.service-price {
+    color: white;
+    font-size: 40px;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 6px;
+}
+
+.service-price-note {
+    color: #52525b;
+    font-size: 13px;
+    line-height: 1.5;
+    margin-bottom: 24px;
+}
+
+.service-features {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.service-features li {
+    color: #d4d4d8;
+    font-size: 15px;
+    padding-left: 28px;
+    position: relative;
+}
+
+.service-features li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: #22c55e;
+    font-weight: 700;
+}
+
+.service-btn {
+    display: block;
+    width: 100%;
+    padding: 14px;
+    text-align: center;
+    background-color: #22c55e;
+    color: white;
+    font-size: 15px;
+    font-weight: 600;
+    font-family: Arial, Helvetica, sans-serif;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.2s ease, transform 0.15s ease;
+}
+
+.service-btn:hover {
+    background-color: #16a34a;
+    box-shadow: 0 0 24px rgba(34, 197, 94, 0.6);
+    transform: translateY(-1px);
+}
+
+/* Zusatzleistungen */
+.zusatz {
+    background-color: #09090B;
+    padding: 80px 40px;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+}
+
+.zusatz h2 {
+    color: white;
+    font-size: 40px;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    text-align: center;
+}
+
+.zusatz-grid {
+    display: flex;
+    gap: 24px;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 1100px;
+}
+
+.zusatz-card {
+    background-color: #18181b;
+    border: 1px solid #27272a;
+    border-radius: 16px;
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    flex: 1;
+    min-width: 260px;
+    max-width: 340px;
+    transition: border-color 0.2s ease;
+}
+
+.zusatz-card:hover {
+    border-color: #22c55e;
+}
+
+.zusatz-card h3 {
+    color: white;
+    font-size: 17px;
+    font-weight: 700;
+    margin-top: 8px;
+}
+
+.zusatz-card p {
+    color: #71717a;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.zusatz-price {
+    color: #22c55e;
+    font-size: 20px;
+    font-weight: 700;
+    margin-top: 4px;
+}
+
+/* Arbeitsprozess */
+.prozess {
+    background-color: #09090B;
+    padding: 0 40px 100px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.prozess-inner {
+    background-color: #18181b;
+    border-radius: 20px;
+    padding: 60px 40px;
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 48px;
+}
+
+.prozess-inner h2 {
+    color: white;
+    font-size: 40px;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    text-align: center;
+}
+
+.prozess-steps {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 32px;
+    width: 100%;
+}
+
+.prozess-step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 16px;
+}
+
+.prozess-number {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    border: 2px solid #22c55e;
+    color: #22c55e;
+    font-size: 18px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.prozess-step h3 {
+    color: white;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.prozess-step p {
+    color: #71717a;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+/* FAQ */
+.faq {
+    background-color: #09090B;
+    padding: 80px 40px 100px;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+}
+
+.faq h2 {
+    color: white;
+    font-size: 40px;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    text-align: center;
+}
+
+.faq-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+    max-width: 800px;
+}
+
+.faq-item {
+    background-color: #18181b;
+    border: 1px solid #27272a;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.faq-question {
+    width: 100%;
+    background: none;
+    border: none;
+    padding: 20px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    color: white;
+    font-size: 16px;
+    font-weight: 700;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: left;
+    gap: 16px;
+}
+
+.faq-arrow {
+    color: #a1a1aa;
+    font-size: 22px;
+    transition: transform 0.25s ease;
+    flex-shrink: 0;
+    line-height: 1;
+}
+
+.faq-item.open .faq-arrow {
+    transform: rotate(90deg);
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease, padding 0.3s ease;
+    padding: 0 24px;
+}
+
+.faq-item.open .faq-answer {
+    max-height: 200px;
+    padding: 0 24px 20px;
+}
+
+.faq-answer p {
+    color: #a1a1aa;
+    font-size: 15px;
+    line-height: 1.7;
+}
+
