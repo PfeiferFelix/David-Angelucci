@@ -1,3 +1,76 @@
+/* Popup */
+.popup-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1000;
+    align-items: center;
+    justify-content: center;
+}
+
+.popup-overlay.active {
+    display: flex;
+}
+
+.popup-box {
+    background-color: #18181b;
+    border: 1px solid #27272a;
+    border-radius: 16px;
+    padding: 48px 40px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    max-width: 400px;
+    width: 90%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.popup-icon {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background-color: #22c55e;
+    color: white;
+    font-size: 24px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.popup-box h3 {
+    color: white;
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.popup-box p {
+    color: #a1a1aa;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+.popup-close {
+    margin-top: 8px;
+    padding: 12px 28px;
+    background-color: #22c55e;
+    color: white;
+    font-size: 15px;
+    font-weight: 600;
+    font-family: Arial, Helvetica, sans-serif;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.popup-close:hover {
+    background-color: #16a34a;
+}
+
 /* ── Section Head ── */
 .KontaktSectionHead {
     display: flex;
