@@ -22,6 +22,15 @@
         </nav>
     </header>
 
+    <div id="successPopup" class="popup-overlay">
+        <div class="popup-box">
+            <div class="popup-icon">✓</div>
+            <h3>Danke für deine Anfrage!</h3>
+            <p>Du wirst in kürze von mir hören.</p>
+            <button class="popup-close" onclick="closePopup()">Schließen</button>
+        </div>
+    </div>
+
     <main>
         <div class="KontaktSectionHead">
             <h2 class="headlineKontakt">Kontaktiere mich</h2>
@@ -63,7 +72,7 @@
                         <label>Nachricht *</label>
                         <textarea placeholder="Erzähle mir mehr über dein Projekt..."></textarea>
                     </div>
-                    <button type="submit" class="form-submit">
+                    <button type="submit" class="form-submit" onclick="showPopup(event)">
                         Nachricht senden
                         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                             <line x1="22" y1="2" x2="11" y2="13"></line>
@@ -155,7 +164,7 @@
         <div class="footer-top">
             <div class="footer-brand">
                 <div class="footer-logo">
-                    <img src="./images/logo.png" alt="Angelucci Film Media">
+                    <img src="./images/cam.png" alt="Angelucci Film Media">
                     <span class="footer-logo-text">Angelucci Film Media</span>
                 </div>
                 <p class="footer-desc">Professionelle Videografie für Hochzeiten, Verlobungen und Unternehmensvideos in ganz Österreich.</p>
