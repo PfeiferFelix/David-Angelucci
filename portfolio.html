@@ -6,6 +6,7 @@
     <title>David Angelucci</title>
     <script src="./script.js"></script>
     <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./portfolio.css">
 </head>
 <body>
     <header>
@@ -21,6 +22,34 @@
         </nav>
     </header>
     <main>
+        <!-- Hero: Portfolio -->
+        <section class="portfolio-hero">
+            <h1>Portfolio</h1>
+            <p class="portfolio-hero-sub">Eine Auswahl meiner Arbeiten – von emotionalen Hochzeitsvideos bis zu professionellen Unternehmensreels</p>
+        </section>
+
+        <!-- Videos -->
+        <section class="portfolio-videos">
+            <div class="portfolio-video-card" onclick="openVideoModal('./videos/Lo Scoglio 8.MP4')">
+                <div class="portfolio-video-thumb">
+                    <video muted>
+                        <source src="./videos/Lo Scoglio 8.MP4" type="video/mp4">
+                    </video>
+                    <div class="portfolio-play-btn">&#9654;</div>
+                </div>
+                <p class="portfolio-video-title">Lo Scoglio</p>
+            </div>
+        </section>
+
+        <!-- Video Modal -->
+        <div class="video-modal" id="videoModal" onclick="closeVideoModal()">
+            <div class="video-modal-content" onclick="event.stopPropagation()">
+                <button class="video-modal-close" onclick="closeVideoModal()">&#x2715;</button>
+                <video id="modalVideo" controls>
+                    <source id="modalVideoSrc" src="" type="video/mp4">
+                </video>
+            </div>
+        </div>
     </main>
     <footer>
         <div class="footer-top">
