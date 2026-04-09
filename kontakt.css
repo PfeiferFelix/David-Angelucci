@@ -25,14 +25,14 @@
     gap: 16px;
     max-width: 400px;
     width: 90%;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Inter', sans-serif;
 }
 
 .popup-icon {
     width: 56px;
     height: 56px;
     border-radius: 50%;
-    background-color: #22c55e;
+    background-color: #15D1AA;
     color: white;
     font-size: 24px;
     font-weight: 700;
@@ -56,11 +56,11 @@
 .popup-close {
     margin-top: 8px;
     padding: 12px 28px;
-    background-color: #22c55e;
+    background-color: #15D1AA;
     color: white;
     font-size: 15px;
     font-weight: 600;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Inter', sans-serif;
     border: none;
     border-radius: 8px;
     cursor: pointer;
@@ -68,7 +68,7 @@
 }
 
 .popup-close:hover {
-    background-color: #16a34a;
+    background-color: #0B5041;
 }
 
 /* ── Section Head ── */
@@ -80,7 +80,7 @@
     text-align: center;
     padding: 80px 40px 60px;
     background-color: #09090B;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Inter', sans-serif;
     gap: 16px;
     color: white;
 }
@@ -102,7 +102,7 @@
 main {
     background-color: #09090B;
     padding: 0 40px 80px;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Inter', sans-serif;
 }
 
 .kontakt-grid {
@@ -126,7 +126,7 @@ main {
     font-size: 24px;
     font-weight: 700;
     margin-bottom: 28px;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Inter', sans-serif;
 }
 
 .kontakt-form {
@@ -145,7 +145,7 @@ main {
     color: white;
     font-size: 14px;
     font-weight: 500;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Inter', sans-serif;
 }
 
 .form-group input,
@@ -157,7 +157,7 @@ main {
     padding: 12px 16px;
     color: #f4f4f5;
     font-size: 15px;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Inter', sans-serif;
     outline: none;
     transition: border-color 0.2s ease;
     width: 100%;
@@ -171,7 +171,7 @@ main {
 .form-group input:focus,
 .form-group select:focus,
 .form-group textarea:focus {
-    border-color: #22c55e;
+    border-color: #15D1AA;
 }
 
 .form-group select {
@@ -208,11 +208,11 @@ main {
     align-items: center;
     justify-content: center;
     gap: 8px;
-    background-color: #22c55e;
+    background-color: #15D1AA;
     color: white;
     font-size: 15px;
     font-weight: 600;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Inter', sans-serif;
     border: none;
     border-radius: 8px;
     padding: 14px;
@@ -223,16 +223,16 @@ main {
 }
 
 .form-submit:hover {
-    background-color: #16a34a;
+    background-color: #0B5041;
     transform: translateY(-1px);
-    box-shadow: 0 0 24px rgba(34, 197, 94, 0.5), 0 0 48px rgba(34, 197, 94, 0.25);
+    box-shadow: 0 0 24px rgba(21, 209, 170, 0.5), 0 0 48px rgba(21, 209, 170, 0.25);
 }
 
 .form-note {
     text-align: center;
     color: #71717a;
     font-size: 13px;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Inter', sans-serif;
 }
 
 /* ── Right column ── */
@@ -270,14 +270,14 @@ main {
 .info-label {
     font-size: 13px;
     color: #71717a;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Inter', sans-serif;
 }
 
 .info-value {
     font-size: 17px;
     font-weight: 500;
     color: #f4f4f5;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Inter', sans-serif;
 }
 
 /* ── Verfügbarkeit card ── */
@@ -286,7 +286,7 @@ main {
     border: 1px solid #27272a;
     border-radius: 12px;
     padding: 24px;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Inter', sans-serif;
 }
 
 .verfug-title {
@@ -322,14 +322,14 @@ main {
 
 /* ── FAQ card ── */
 .cardQuestions {
-    background-color: rgba(34, 197, 94, 0.05);
-    border: 1px solid rgba(34, 197, 94, 0.2);
+    background-color: rgba(21, 209, 170, 0.05);
+    border: 1px solid rgba(21, 209, 170, 0.2);
     border-radius: 12px;
     padding: 24px;
     display: flex;
     flex-direction: column;
     gap: 10px;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Inter', sans-serif;
 }
 
 .faq-title {
@@ -345,7 +345,7 @@ main {
 }
 
 .cardQuestions a {
-    color: #22c55e;
+    color: #15D1AA;
     text-decoration: none;
     font-size: 14px;
     font-weight: 600;
@@ -354,7 +354,7 @@ main {
 }
 
 .cardQuestions a:hover {
-    color: #16a34a;
+    color: #0B5041;
     text-decoration: underline;
 }
 

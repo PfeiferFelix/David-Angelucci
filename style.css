@@ -1,7 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700&family=Inter:wght@400;500;600;700&display=swap');
+
 * {
   box-sizing: border-box;
   margin: 0;
   scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Atkinson Hyperlegible', sans-serif;
 }
 
 header {
@@ -21,15 +31,18 @@ header {
 }
 
 .logo img {
-    height: 32px;
+    height: 44px;
     width: auto;
+    background: white;
+    padding: 4px 10px;
+    border-radius: 6px;
 }
 
 .logo-text {
     color: white;
     font-size: 18px;
     font-weight: 600;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Inter', sans-serif;
     letter-spacing: 0.05em;
 }
 
@@ -43,7 +56,7 @@ header {
     color: #a1a1aa;
     text-decoration: none;
     font-size: 15px;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Inter', sans-serif;
     padding-bottom: 4px;
     position: relative;
     transition: color 0.2s ease;
@@ -56,13 +69,13 @@ header {
     left: 0;
     width: 100%;
     height: 2px;
-    background-color: #22c55e;
+    background-color: #15D1AA;
     transform: scaleX(0);
     transition: transform 0.2s ease;
 }
 
 .link:hover {
-    color: #22c55e;
+    color: #15D1AA;
     cursor: pointer;
 }
 
@@ -72,7 +85,7 @@ header {
 
 /* Active nav link */
 .link.active {
-    color: #22c55e;
+    color: #15D1AA;
 }
 .link.active::after {
     transform: scaleX(1);
@@ -87,7 +100,7 @@ header {
     text-align: center;
     padding: 100px 40px 60px;
     background-color: #09090B;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Inter', sans-serif;
     gap: 60px;
     min-height: calc(100vh - 70px);
 }
@@ -109,7 +122,7 @@ header {
 }
 
 .hero-highlight {
-    color: #22c55e;
+    color: #15D1AA;
 }
 
 .hero-subtitle {
@@ -127,11 +140,11 @@ header {
 
 .btn-primary {
     padding: 14px 28px;
-    background-color: #22c55e;
+    background-color: #15D1AA;
     color: white;
     font-size: 15px;
     font-weight: 600;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Inter', sans-serif;
     border: none;
     border-radius: 8px;
     cursor: pointer;
@@ -149,9 +162,9 @@ header {
 }
 
 .btn-primary:hover {
-    background-color: #16a34a;
+    background-color: #0B5041;
     transform: translateY(-1px);
-    box-shadow: 0 0 24px rgba(34, 197, 94, 0.9), 0 0 48px rgba(34, 197, 94, 0.5);
+    box-shadow: 0 0 24px rgba(21, 209, 170, 0.9), 0 0 48px rgba(21, 209, 170, 0.5);
 }
 
 .btn-outline {
@@ -160,7 +173,7 @@ header {
     color: white;
     font-size: 15px;
     font-weight: 600;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Inter', sans-serif;
     border: 1px solid rgba(255,255,255,0.3);
     border-radius: 8px;
     cursor: pointer;
@@ -214,7 +227,7 @@ header {
 .icon-camera {
     width: 20px;
     height: 14px;
-    border: 2px solid #22c55e;
+    border: 2px solid #15D1AA;
     border-radius: 3px;
     margin: 7px 4px;
 }
@@ -226,7 +239,7 @@ header {
     transform: translateY(-50%);
     border-top: 5px solid transparent;
     border-bottom: 5px solid transparent;
-    border-left: 7px solid #22c55e;
+    border-left: 7px solid #15D1AA;
 }
 
 /* People icon: two circles */
@@ -240,7 +253,7 @@ header {
     position: absolute;
     width: 13px;
     height: 13px;
-    border: 2px solid #22c55e;
+    border: 2px solid #15D1AA;
     border-radius: 50%;
 }
 .icon-people::before {
@@ -265,7 +278,7 @@ header {
     transform: translateX(-50%);
     width: 16px;
     height: 16px;
-    border: 2px solid #22c55e;
+    border: 2px solid #15D1AA;
     border-radius: 50%;
 }
 .icon-award::after {
@@ -276,7 +289,7 @@ header {
     transform: translateX(-50%);
     border-left: 7px solid transparent;
     border-right: 7px solid transparent;
-    border-top: 10px solid #22c55e;
+    border-top: 10px solid #15D1AA;
 }
 
 /* My Services */
@@ -288,7 +301,7 @@ header {
     text-align: center;
     padding: 100px 40px;
     background-color: rgb(24,24,26);
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Inter', sans-serif;
     gap: 20px;
 }
 
@@ -309,11 +322,11 @@ header {
 .showServices {
     margin-top: 8px;
     padding: 14px 28px;
-    background-color: #22c55e;
+    background-color: #15D1AA;
     color: white;
     font-size: 15px;
     font-weight: 600;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Inter', sans-serif;
     border: none;
     border-radius: 8px;
     cursor: pointer;
@@ -331,9 +344,9 @@ header {
 }
 
 .showServices:hover {
-   background-color: #16a34a;
+   background-color: #0B5041;
     transform: translateY(-1px);
-    box-shadow: 0 0 24px rgba(34, 197, 94, 0.9), 0 0 48px rgba(34, 197, 94, 0.5);
+    box-shadow: 0 0 24px rgba(21, 209, 170, 0.9), 0 0 48px rgba(21, 209, 170, 0.5);
 }
 
 /* Testimonials */
@@ -343,7 +356,7 @@ header {
     align-items: center;
     padding: 100px 40px;
     background-color: #09090B;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Inter', sans-serif;
     gap: 48px;
 }
 
@@ -406,7 +419,7 @@ header {
     text-align: center;
     padding: 100px 40px;
     background-color: #09090B;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Inter', sans-serif;
     gap: 20px;
 }
 
@@ -430,11 +443,11 @@ header {
 .kontakt {
     margin-top: 8px;
     padding: 14px 28px;
-    background-color: #22c55e;
+    background-color: #15D1AA;
     color: white;
     font-size: 15px;
     font-weight: 600;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Inter', sans-serif;
     border: none;
     border-radius: 8px;
     cursor: pointer;
@@ -443,9 +456,9 @@ header {
 }
 
 .kontakt:hover {
-    background-color: #16a34a;
+    background-color: #0B5041;
     transform: translateY(-1px);
-    box-shadow: 0 0 24px rgba(34, 197, 94, 0.9), 0 0 48px rgba(34, 197, 94, 0.5);
+    box-shadow: 0 0 24px rgba(21, 209, 170, 0.9), 0 0 48px rgba(21, 209, 170, 0.5);
 }
 
 .kontakt .arrow {
@@ -461,7 +474,7 @@ header {
 footer {
     background-color: rgb(24,24,26);
     padding: 60px 40px 30px;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Inter', sans-serif;
     color: #a1a1aa;
 }
 
@@ -484,8 +497,11 @@ footer {
 }
 
 .footer-logo img {
-    height: 28px;
+    height: 36px;
     width: auto;
+    background: white;
+    padding: 3px 8px;
+    border-radius: 6px;
 }
 
 .footer-logo-text {
@@ -521,7 +537,7 @@ footer {
 }
 
 .footer-link:hover {
-    color: #22c55e;
+    color: #15D1AA;
 }
 
 .footer-socials {
