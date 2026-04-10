@@ -4,17 +4,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>David Angelucci</title>
+    <title>ESTEEMED videography</title>
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
     <script src="./script.js"></script>
+    <script src="./particles.js" defer></script>
     <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="./kontakt.css">
     
 </head>
 
 <body>
+    <canvas id="hero-canvas"></canvas>
     <header>
         <div class="logo">
-            <img src="./images/HAUPTLOGO.png" alt="ESTEEMED videography">
+            <img src="./images/Logo weiß türkis.png" alt="ESTEEMED videography">
         </div>
         <nav class="MenuBar">
             <a class="link active" href="./main.html">Home</a>
@@ -30,11 +33,16 @@
 
         <section class="hero">
             <div class="hero-content">
-                <h1>Emotionen in <span class="hero-highlight">Bewegung</span></h1>
-                <p class="hero-subtitle">Professionelle Videografie aus Österreich für Hochzeiten, Verlobungen und Unternehmensvideos</p>
-                <div class="hero-buttons">
-                    <button class="btn-primary">Portfolio ansehen <span class="arrow">→</span></button>
-                    <button class="btn-outline">Anfrage senden</button>
+                <div class="hero-text">
+                    <h1>Deine Geschichte.<br><span class="hero-highlight">Professionell verfilmt.</span></h1>
+                    <p class="hero-subtitle">Professionelle Videografie aus Österreich für Hochzeiten, Verlobungen und Unternehmensvideos</p>
+                    <div class="hero-buttons">
+                        <button class="btn-primary">Portfolio ansehen <span class="arrow">→</span></button>
+                        <button class="btn-outline">Anfrage senden</button>
+                    </div>
+                </div>
+                <div class="hero-image-wrapper">
+                    <img class="hero_jpg" src="./images/5.jpg" alt="">
                 </div>
             </div>
             <div class="hero-stats">
@@ -57,24 +65,82 @@
         </section>
 
         <div class="myServices">
-            <h2>Meine Leistungen</h2>
-            <span>Von Hochzeiten bis zu Unternehmensvideos - ich bringe deine Geschichte zum Leben</span>
-            <button class="showServices">Alle Leistungen ansehen</button>
+            <h2 class="fade-in">Meine Leistungen</h2>
+            <span class="fade-in">Von Hochzeiten bis zu Unternehmensvideos - ich bringe deine Geschichte zum Leben</span>
+            <div class="services-grid">
+                <div class="service-card fade-in">
+                    <div class="service-icon">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" stroke="#15D1AA" stroke-width="2" stroke-linecap="round">
+                            <circle cx="11" cy="16" r="7"/>
+                            <circle cx="21" cy="16" r="7"/>
+                        </svg>
+                    </div>
+                    <h3>Hochzeitsvideos</h3>
+                    <p>Erinnerungen für die Ewigkeit – jeder emotionale Moment eurer Hochzeit festgehalten.</p>
+                </div>
+                <div class="service-card fade-in">
+                    <div class="service-icon">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" stroke="#15D1AA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polygon points="16,3 29,13 16,29 3,13"/>
+                            <line x1="3" y1="13" x2="29" y2="13"/>
+                        </svg>
+                    </div>
+                    <h3>Verlobungsvideos</h3>
+                    <p>Der Beginn eurer Geschichte – romantisch und unvergesslich in Szene gesetzt.</p>
+                </div>
+                <div class="service-card fade-in">
+                    <div class="service-icon">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" stroke="#15D1AA" stroke-width="2" stroke-linecap="round">
+                            <rect x="2" y="7" width="28" height="18" rx="2"/>
+                            <polygon points="13,12 13,20 21,16" fill="#15D1AA" stroke="none"/>
+                        </svg>
+                    </div>
+                    <h3>Unternehmensvideos</h3>
+                    <p>Professionelle Imagevideos die deine Marke und Botschaft zum Leben erwecken.</p>
+                </div>
+            </div>
+            <button class="showServices fade-in">Alle Leistungen ansehen <span class="arrow">→</span></button>
         </div>
 
+        <section class="testimonials">
+            <h2 class="fade-in">Was meine Kunden sagen</h2>
+            <div class="testimonials-grid">
+                <div class="testimonial-card fade-in">
+                    <p class="testimonial-quote">„David hat unsere Hochzeit so wunderschön eingefangen. Das Video bringt uns jedes Mal zum Weinen – vor Freude. Absolute Empfehlung!"</p>
+                    <div class="testimonial-author">
+                        <span class="author-name">Anna & Markus S.</span>
+                        <span class="author-type">Hochzeitspaar, Wien</span>
+                    </div>
+                </div>
+                <div class="testimonial-card fade-in">
+                    <p class="testimonial-quote">„Unser Imagevideo hat genau den Ton getroffen, den wir wollten. Professionell, kreativ und immer pünktlich – top Zusammenarbeit."</p>
+                    <div class="testimonial-author">
+                        <span class="author-name">Thomas B.</span>
+                        <span class="author-type">Geschäftsführer, Graz</span>
+                    </div>
+                </div>
+                <div class="testimonial-card fade-in">
+                    <p class="testimonial-quote">„Das Verlobungsvideo war eine riesige Überraschung. David arbeitet so diskret und einfühlsam – das Ergebnis hat uns sprachlos gemacht."</p>
+                    <div class="testimonial-author">
+                        <span class="author-name">Julia & Felix K.</span>
+                        <span class="author-type">Verlobungspaar, Salzburg</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <div class="readyProject">
-            <h2>Bereit für dein Projekt?</h2>
-            <span class="BeratungsgesprächText">Lass uns gemeinsam etwas Außergewöhnliches schaffen. Kontaktiere mich für ein unverbindliches Beratungsgespräch.</span>
-            <button class="kontakt">Jetzt Kontakt aufnehmen <span class="arrow">→</span></button>
+            <h2 class="fade-in">Bereit für dein Projekt?</h2>
+            <span class="BeratungsgesprächText fade-in">Lass uns gemeinsam etwas Außergewöhnliches schaffen. Kontaktiere mich für ein unverbindliches Beratungsgespräch.</span>
+            <button class="kontakt fade-in">Jetzt Kontakt aufnehmen <span class="arrow">→</span></button>
         </div>
     </main>
     <footer>
         <div class="footer-top">
             <div class="footer-brand">
                 <div class="footer-logo">
-                    <img src="./images/HAUPTLOGO.png" alt="ESTEEMED videography">
+                    <img class="logo" src="./images/Logo weiß türkis.png" alt="ESTEEMED videography">
                 </div>
-                <p class="footer-desc">Professionelle Videografie für Hochzeiten, Verlobungen und Unternehmensvideos in ganz Österreich.</p>
             </div>
             <div class="footer-links">
                 <h4 class="footer-heading">Links</h4>
@@ -109,6 +175,26 @@
         </div>
     </footer>
 
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach((entry, i) => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.transitionDelay = entry.target.dataset.delay || '0ms';
+                        entry.target.classList.add('visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.12 });
+
+            document.querySelectorAll('.fade-in').forEach((el, i) => {
+                const siblings = el.parentElement.querySelectorAll('.fade-in');
+                const idx = Array.from(siblings).indexOf(el);
+                if (siblings.length > 1) el.dataset.delay = (idx * 120) + 'ms';
+                observer.observe(el);
+            });
+        });
+    </script>
 </body>
 
 </html>
