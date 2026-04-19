@@ -6,9 +6,16 @@
     justify-content: center;
     text-align: center;
     padding: 100px 40px 80px;
-    background-color: #09090B;
     font-family: 'Inter', sans-serif;
     gap: 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+.ueber-hero h1,
+.ueber-hero-sub {
+    position: relative;
+    z-index: 1;
 }
 
 .ueber-hero h1 {

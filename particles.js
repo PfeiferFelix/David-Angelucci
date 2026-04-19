@@ -114,10 +114,9 @@ class Particle {
 }
 
 const updateHeroCanvasSize = () => {
-  particleState.canvas.width = window.innerWidth * 2
-  particleState.canvas.height = window.innerHeight * 2
-  particleState.canvas.style.width = window.innerWidth + 'px'
-  particleState.canvas.style.height = window.innerHeight + 'px'
+  const parent = particleState.canvas.parentElement
+  particleState.canvas.width = parent.offsetWidth * 2
+  particleState.canvas.height = parent.offsetHeight * 2
 }
 
 let pids = 0

@@ -1,16 +1,43 @@
 function openVideoModal(src) {
     const modal = document.getElementById('videoModal');
     const video = document.getElementById('modalVideo');
-    const source = document.getElementById('modalVideoSrc');
-    source.src = src;
-    video.load();
+    const vimeoWrapper = document.getElementById('modalVimeoWrapper');
+    const vimeoIframe = document.getElementById('modalVimeo');
+    const content = modal.querySelector('.video-modal-content');
+
+    if (src.startsWith('vimeo:')) {
+        const parts = src.split(':');
+        const videoId = parts[1];
+        const orientation = parts[2];
+        video.style.display = 'none';
+        vimeoWrapper.style.display = 'block';
+        vimeoIframe.src = `https://player.vimeo.com/video/${videoId}?badge=0&autopause=0&autoplay=1&player_id=0&app_id=58479`;
+        if (orientation === 'portrait') {
+            content.classList.add('portrait-mode');
+            vimeoWrapper.style.paddingTop = '177.78%';
+        } else {
+            vimeoWrapper.style.paddingTop = '56.25%';
+        }
+    } else {
+        const source = document.getElementById('modalVideoSrc');
+        vimeoWrapper.style.display = 'none';
+        video.style.display = '';
+        source.src = src;
+        video.load();
+    }
     modal.classList.add('active');
 }
 
 function closeVideoModal() {
     const modal = document.getElementById('videoModal');
     const video = document.getElementById('modalVideo');
+    const vimeoWrapper = document.getElementById('modalVimeoWrapper');
+    const vimeoIframe = document.getElementById('modalVimeo');
+    const content = modal.querySelector('.video-modal-content');
     video.pause();
+    vimeoIframe.src = '';
+    vimeoWrapper.style.display = 'none';
+    content.classList.remove('portrait-mode');
     modal.classList.remove('active');
 }
 
