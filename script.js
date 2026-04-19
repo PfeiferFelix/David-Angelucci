@@ -26,6 +26,7 @@ function openVideoModal(src) {
         video.load();
     }
     modal.classList.add('active');
+    document.body.style.overflow = 'hidden';
 }
 
 function closeVideoModal() {
@@ -39,6 +40,7 @@ function closeVideoModal() {
     vimeoWrapper.style.display = 'none';
     content.classList.remove('portrait-mode');
     modal.classList.remove('active');
+    document.body.style.overflow = '';
 }
 
 document.addEventListener('keydown', function(e) {

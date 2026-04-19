@@ -10,7 +10,6 @@
     font-family: 'Inter', sans-serif;
     gap: 20px;
 }
-
 .portfolio-hero h1 {
     color: white;
     font-size: 72px;
@@ -109,28 +108,30 @@
 
 .video-modal-content {
     position: relative;
-    width: 60vw;
-    max-width: 700px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .video-modal-content video {
-    width: 100%;
+    width: auto;
+    max-width: 90vw;
     max-height: 85vh;
-    object-fit: contain;
     border-radius: 12px;
     display: block;
 }
 
 .video-modal-close {
     position: absolute;
-    top: -40px;
+    top: -36px;
     right: 0;
     background: none;
     border: none;
     color: white;
-    font-size: 24px;
+    font-size: 22px;
     cursor: pointer;
     line-height: 1;
+    z-index: 10;
 }
 
 .video-modal-content.portrait-mode {
