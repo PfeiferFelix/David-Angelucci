@@ -1,3 +1,13 @@
+document.addEventListener('DOMContentLoaded', function () {
+    document.querySelectorAll('.portfolio-thumb-img[data-vimeo-id]').forEach(function (img) {
+        const id = img.dataset.vimeoId;
+        fetch(`https://vimeo.com/api/oembed.json?url=https://vimeo.com/${id}`)
+            .then(r => r.json())
+            .then(data => { img.src = data.thumbnail_url; })
+            .catch(() => {});
+    });
+});
+
 function openVideoModal(src) {
     const modal = document.getElementById('videoModal');
     const video = document.getElementById('modalVideo');
@@ -14,9 +24,10 @@ function openVideoModal(src) {
         vimeoIframe.src = `https://player.vimeo.com/video/${videoId}?badge=0&autopause=0&autoplay=1&player_id=0&app_id=58479`;
         if (orientation === 'portrait') {
             content.classList.add('portrait-mode');
-            vimeoWrapper.style.paddingTop = '177.78%';
+            vimeoWrapper.classList.add('portrait');
         } else {
-            vimeoWrapper.style.paddingTop = '56.25%';
+            content.classList.remove('portrait-mode');
+            vimeoWrapper.classList.remove('portrait');
         }
     } else {
         const source = document.getElementById('modalVideoSrc');
@@ -38,6 +49,7 @@ function closeVideoModal() {
     video.pause();
     vimeoIframe.src = '';
     vimeoWrapper.style.display = 'none';
+    vimeoWrapper.classList.remove('portrait');
     content.classList.remove('portrait-mode');
     modal.classList.remove('active');
     document.body.style.overflow = '';
