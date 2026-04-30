@@ -353,3 +353,65 @@
     line-height: 1.7;
 }
 
+
+/* ===================================================
+   RESPONSIVE — 768px
+   =================================================== */
+@media (max-width: 768px) {
+    .services-hero {
+        padding: 80px 20px 60px;
+    }
+    .services-hero h1 {
+        font-size: 42px;
+    }
+    .services-hero .hero-subtitle {
+        font-size: 16px;
+    }
+    .service-cards {
+        padding: 0 20px 60px;
+        gap: 16px;
+    }
+    .service-card {
+        width: calc(50% - 8px);
+    }
+    .zusatz {
+        padding: 60px 20px;
+    }
+    .zusatz h2 {
+        font-size: 30px;
+    }
+    .prozess {
+        padding: 0 20px 60px;
+    }
+    .prozess-inner {
+        padding: 40px 20px;
+    }
+    .prozess-inner h2 {
+        font-size: 30px;
+    }
+    .prozess-steps {
+        grid-template-columns: 1fr 1fr;
+        gap: 24px;
+    }
+    .faq {
+        padding: 60px 20px 80px;
+    }
+    .faq h2 {
+        font-size: 30px;
+    }
+}
+
+/* ===================================================
+   RESPONSIVE — 480px
+   =================================================== */
+@media (max-width: 480px) {
+    .services-hero h1 {
+        font-size: 32px;
+    }
+    .service-card {
+        width: 100%;
+    }
+    .prozess-steps {
+        grid-template-columns: 1fr;
+    }
+}

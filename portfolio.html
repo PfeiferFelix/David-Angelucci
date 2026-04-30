@@ -6,21 +6,12 @@
     <title>ESTEEMED videography</title>
     <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
     <script src="./script.js"></script>
+    <script src="./templates.js" defer></script>
     <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="./portfolio.css">
 </head>
 <body>
-    <header>
-        <div class="logo">
-            <img src="./images/Logo weiß türkis.png" alt="ESTEEMED videography">
-        </div>
-        <nav class="MenuBar">
-            <a class="link" href="./main.html">Home</a>
-            <a class="link active" href="./portfolio.html">Portfolio</a>
-            <a class="link" href="./services.html">Services</a>
-            <a class="link" href="./kontakt.html">Kontakt</a>
-        </nav>
-    </header>
+    <div id="header-placeholder"></div>
     <main>
         <!-- Hero: Portfolio -->
         <section class="portfolio-hero">
@@ -32,79 +23,50 @@
         <section class="portfolio-videos">
             <div class="portfolio-video-card" onclick="openVideoModal('vimeo:1182266783:portrait')">
                 <div class="portfolio-video-thumb">
-                    <img class="portfolio-thumb-img" data-vimeo-id="1182266783" alt="Lo Scoglio">
+                    <div class="portfolio-thumb-img" data-vimeo-id="1182266783"></div>
                     <div class="portfolio-play-btn">&#9654;</div>
                 </div>
                 <p class="portfolio-video-title">Lo Scoglio</p>
             </div>
             <div class="portfolio-video-card" onclick="openVideoModal('vimeo:1184578452:portrait')">
                 <div class="portfolio-video-thumb">
-                    <img class="portfolio-thumb-img" data-vimeo-id="1184578452" alt="Yoto">
+                    <div class="portfolio-thumb-img" data-vimeo-id="1184578452"></div>
                     <div class="portfolio-play-btn">&#9654;</div>
                 </div>
                 <p class="portfolio-video-title">Yoto</p>
             </div>
             <div class="portfolio-video-card" onclick="openVideoModal('vimeo:1184578234:portrait')">
                 <div class="portfolio-video-thumb">
-                    <img class="portfolio-thumb-img" data-vimeo-id="1184578234" alt="Zypern Edit">
+                    <div class="portfolio-thumb-img" data-vimeo-id="1184578234"></div>
                     <div class="portfolio-play-btn">&#9654;</div>
                 </div>
                 <p class="portfolio-video-title">Zypern</p>
             </div>
+            <div class="portfolio-video-card" onclick="openVideoModal('vimeo:1184578451:portrait')">
+                <div class="portfolio-video-thumb">
+                    <div class="portfolio-thumb-img" data-vimeo-id="1184578451"></div>
+                    <div class="portfolio-play-btn">&#9654;</div>
+                </div>
+                <p class="portfolio-video-title">Kratzer 24</p>
+            </div>
         </section>
 
-        <!-- Video Modal -->
-        <div class="video-modal" id="videoModal" onclick="closeVideoModal()">
-            <div class="video-modal-content" onclick="event.stopPropagation()">
-                <button class="video-modal-close" onclick="closeVideoModal()">&#x2715;</button>
-                <video id="modalVideo" controls style="display:none;">
-                    <source id="modalVideoSrc" src="" type="video/mp4">
-                </video>
-                <div id="modalVimeoWrapper" style="display:none;">
-                    <iframe id="modalVimeo" src="" frameborder="0"
-                        allow="autoplay; fullscreen; picture-in-picture"
-                        allowfullscreen></iframe>
-                </div>
-            </div>
-        </div>
     </main>
-    <footer>
-        <div class="footer-top">
-            <div class="footer-brand">
-                <div class="footer-logo">
-                    <img src="./images/Logo weiß türkis.png" alt="ESTEEMED videography">
-                </div>
-            </div>
-            <div class="footer-links">
-                <h4 class="footer-heading">Links</h4>
-                <a class="footer-link" href="./main.html">Home</a>
-                <a class="footer-link" href="./portfolio.html">Portfolio</a>
-                <a class="footer-link" href="./services.html">Services</a>
-                <a class="footer-link" href="./kontakt.html">Kontakt</a>
-            </div>
-            <div class="footer-socials">
-                <h4 class="footer-heading">Socials</h4>
-                <a class="footer-link" href="https://www.instagram.com/dvdangelucci/" target="_blank">Instagram</a>
-                <a class="footer-link" href="https://www.facebook.com/david.angelucci.330" target="_blank">Facebook</a>
-                <a class="footer-link" href="https://www.tiktok.com/@dvdangelucci" target="_blank">TikTok</a>
-            </div>
-            <div class="footer-legal">
-                <h4 class="footer-heading">Rechtliches</h4>
-                <a class="footer-link" href="./impressum.html">Impressum</a>
-                <a class="footer-link" href="./agb.html">AGB</a>
-                <a class="footer-link" href="./datenschutz.html">Datenschutz</a>
-            </div>
-            <div class="footer-kontakt">
-                <h4 class="footer-heading">Kontakt</h4>
-                <p>Email: info@angeluccifilmmedia.at</p>
-                <p>Telefon: +43 123 456 789</p>
-                <p>Österreich</p>
+
+    <!-- Video Modal -->
+    <div class="video-modal" id="videoModal" onclick="closeVideoModal()">
+        <div class="video-modal-content" onclick="event.stopPropagation()">
+            <button class="video-modal-close" onclick="closeVideoModal()">&#x2715;</button>
+            <video id="modalVideo" controls style="display:none;">
+                <source id="modalVideoSrc" src="" type="video/mp4">
+            </video>
+            <div id="modalVimeoWrapper" style="display:none;">
+                <iframe id="modalVimeo" src="" frameborder="0"
+                    allow="autoplay; fullscreen; picture-in-picture"
+                    allowfullscreen></iframe>
             </div>
         </div>
-        <div class="footer-divider"></div>
-        <div class="footer-bottom">
-            <p>© 2026 ESTEEMED videography. Alle Rechte vorbehalten.</p>
-        </div>
-    </footer>
+    </div>
+    <div id="footer-placeholder"></div>
 </body>
 </html>

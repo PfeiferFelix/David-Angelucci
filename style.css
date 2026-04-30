@@ -1367,3 +1367,262 @@ footer::before {
     max-width: 1200px;
     margin: 0 auto;
 }
+
+/* ===================================================
+   HAMBURGER BUTTON
+   =================================================== */
+.nav-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 6px;
+    z-index: 10;
+}
+
+.nav-toggle span {
+    display: block;
+    width: 22px;
+    height: 2px;
+    background-color: white;
+    border-radius: 2px;
+    transition: transform 0.25s ease, opacity 0.25s ease;
+}
+
+.nav-toggle[aria-expanded="true"] span:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+}
+.nav-toggle[aria-expanded="true"] span:nth-child(2) {
+    opacity: 0;
+}
+.nav-toggle[aria-expanded="true"] span:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+}
+
+/* ===================================================
+   RESPONSIVE — 768px
+   =================================================== */
+@media (max-width: 768px) {
+
+    /* Header & Nav */
+    header {
+        padding: 0 20px;
+        flex-wrap: wrap;
+        height: auto;
+        min-height: 60px;
+        position: sticky;
+        top: 0;
+        z-index: 100;
+    }
+    .logo img {
+        height: 120px;
+        width: auto;
+    }
+    .nav-toggle {
+        display: flex;
+    }
+    .MenuBar {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        gap: 0;
+        padding: 8px 0 16px;
+        border-top: 1px solid #27272a;
+    }
+    .MenuBar.open {
+        display: flex;
+    }
+    .MenuBar .link {
+        padding: 12px 4px;
+        font-size: 16px;
+    }
+
+    /* Hero */
+    .hero {
+        padding: 48px 20px 40px;
+        gap: 40px;
+        min-height: unset;
+    }
+    .hero-content {
+        flex-direction: column;
+        gap: 40px;
+        text-align: center;
+    }
+    .hero-text {
+        align-items: center;
+    }
+    .hero-content h1 {
+        font-size: 40px;
+    }
+    .hero-subtitle {
+        font-size: 16px;
+        max-width: 100%;
+    }
+    .hero-buttons {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    .hero_jpg {
+        width: 100%;
+        height: auto;
+        max-height: 420px;
+    }
+
+    /* Section titles */
+    .section-title {
+        font-size: 34px;
+    }
+
+    /* About */
+    .about-section {
+        padding: 60px 20px;
+    }
+
+    /* Stats */
+    .stats-section {
+        padding: 0 20px 60px;
+    }
+    .stats-inner {
+        grid-template-columns: 1fr 1fr;
+    }
+    .stat-divider {
+        display: none;
+    }
+    .stat-item {
+        padding: 36px 16px;
+    }
+    .stat-number {
+        font-size: 44px;
+    }
+
+    /* Values */
+    .values-section {
+        padding: 60px 20px;
+    }
+    .values-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Services Preview */
+    .services-preview-section {
+        padding: 0 20px 60px;
+    }
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Equipment */
+    .equipment-section {
+        padding: 0 20px 60px;
+    }
+    .equipment-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    /* Testimonials */
+    .testimonials-section {
+        padding: 0 20px 60px;
+    }
+    .testimonials-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* CTA */
+    .cta-section {
+        padding: 0 20px 60px;
+    }
+    .cta-card {
+        padding: 48px 24px;
+    }
+    .cta-title {
+        font-size: 36px;
+    }
+
+    /* Über-mich page */
+    .ueber-hero {
+        padding: 60px 20px 48px;
+    }
+    .ueber-hero h1 {
+        font-size: 44px;
+    }
+    .ueber-hero-sub {
+        font-size: 16px;
+    }
+    .ueber-kennen {
+        padding: 60px 20px;
+    }
+    .ueber-stats {
+        padding: 0 20px 60px;
+    }
+    .ueber-stats-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+    .ueber-werte {
+        padding: 60px 20px;
+    }
+    .ueber-werte-grid {
+        grid-template-columns: 1fr;
+    }
+    .ueber-equipment {
+        padding: 0 20px 60px;
+    }
+    .ueber-equipment-inner {
+        padding: 40px 24px;
+    }
+    .ueber-equip-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    /* Footer */
+    footer {
+        padding: 48px 20px 28px;
+    }
+    .footer-top {
+        flex-direction: column;
+        gap: 32px;
+        padding-bottom: 40px;
+    }
+    .footer-brand {
+        max-width: 100%;
+    }
+}
+
+/* ===================================================
+   RESPONSIVE — 480px
+   =================================================== */
+@media (max-width: 480px) {
+
+    /* Hero */
+    .hero-content h1 {
+        font-size: 32px;
+    }
+    .section-title {
+        font-size: 28px;
+    }
+
+    /* Stats: 1 column */
+    .stats-inner {
+        grid-template-columns: 1fr;
+    }
+
+    /* Equipment: 1 column */
+    .equipment-grid {
+        grid-template-columns: 1fr;
+    }
+    .ueber-equip-grid {
+        grid-template-columns: 1fr;
+    }
+    .ueber-stats-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    /* Buttons */
+    .btn-primary,
+    .btn-outline {
+        width: 100%;
+        text-align: center;
+    }
+}

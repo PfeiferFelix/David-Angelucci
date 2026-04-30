@@ -1,19 +1,23 @@
 document.addEventListener('DOMContentLoaded', function () {
-    // Vimeo thumbnails
-    document.querySelectorAll('.portfolio-thumb-img[data-vimeo-id]').forEach(function (img) {
-        const id = img.dataset.vimeoId;
-        // Primär: vumbnail.com (kein CORS-Problem)
-        const fallbackUrl = `https://vumbnail.com/${id}.jpg`;
-        fetch(`https://vimeo.com/api/oembed.json?url=https://vimeo.com/${id}`)
-            .then(r => r.json())
-            .then(data => {
-                if (data.thumbnail_url) {
-                    img.src = data.thumbnail_url;
-                } else {
-                    img.src = fallbackUrl;
-                }
-            })
-            .catch(() => { img.src = fallbackUrl; });
+    // Vimeo thumbnails via oEmbed JSONP
+    document.querySelectorAll('.portfolio-thumb-img[data-vimeo-id]').forEach(function (thumb) {
+        var id = thumb.dataset.vimeoId;
+        var cb = '_vt' + id;
+
+        window[cb] = function (data) {
+            delete window[cb];
+            var s = document.getElementById(cb);
+            if (s) s.parentNode.removeChild(s);
+            if (data && data.thumbnail_url) {
+                var url = data.thumbnail_url.replace(/_\d+x\d+/, '_960x1706');
+                thumb.style.backgroundImage = "url('" + url + "')";
+            }
+        };
+
+        var s = document.createElement('script');
+        s.id = cb;
+        s.src = 'https://vimeo.com/api/oembed.json?url=https://vimeo.com/' + id + '&callback=' + cb;
+        document.head.appendChild(s);
     });
 
     // Inject Vimeo wrapper into modal if not already present

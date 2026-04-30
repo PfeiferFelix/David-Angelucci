@@ -365,3 +365,42 @@ main {
 .link.active::after {
     transform: scaleX(1);
 }
+
+/* ===================================================
+   RESPONSIVE — 768px
+   =================================================== */
+@media (max-width: 768px) {
+    .KontaktSectionHead {
+        padding: 60px 20px 40px;
+    }
+    .headlineKontakt {
+        font-size: 32px;
+    }
+    .kontaktText {
+        font-size: 15px;
+    }
+    main {
+        padding: 0 20px 60px;
+    }
+    .kontakt-grid {
+        grid-template-columns: 1fr;
+    }
+    .kontakt-form-card {
+        padding: 24px;
+    }
+    .popup-box {
+        padding: 36px 24px;
+    }
+}
+
+/* ===================================================
+   RESPONSIVE — 480px
+   =================================================== */
+@media (max-width: 480px) {
+    .headlineKontakt {
+        font-size: 26px;
+    }
+    .kontakt-form-card {
+        padding: 20px 16px;
+    }
+}
