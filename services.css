@@ -36,7 +36,7 @@
     flex-wrap: wrap;
 }
 
-.service-card {
+.service-cards .service-card {
     background-color: #18181b;
     border: 1px solid #27272a;
     border-radius: 16px;
@@ -371,7 +371,7 @@
         padding: 0 20px 60px;
         gap: 16px;
     }
-    .service-card {
+    .service-cards .service-card {
         width: calc(50% - 8px);
     }
     .zusatz {
@@ -408,7 +408,7 @@
     .services-hero h1 {
         font-size: 32px;
     }
-    .service-card {
+    .service-cards .service-card {
         width: 100%;
     }
     .prozess-steps {

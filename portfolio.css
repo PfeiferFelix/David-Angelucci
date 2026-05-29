@@ -111,8 +111,8 @@
 
 .video-modal-content {
     position: relative;
-    width: 60vw;
-    max-width: 700px;
+    width: 88vw;
+    max-width: 1200px;
 }
 
 .video-modal-content video {
@@ -143,7 +143,7 @@
 
 #modalVimeoWrapper iframe {
     width: 100%;
-    height: 70vh;
+    height: 80vh;
     border-radius: 12px;
     display: block;
 }

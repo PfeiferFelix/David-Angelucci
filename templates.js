@@ -8,9 +8,8 @@
             <span></span><span></span><span></span>
         </button>
         <nav class="MenuBar">
-            <a class="link" href="./main.html">Home</a>
+            <a class="link" href="./index.html">Home</a>
             <a class="link" href="./portfolio.html">Portfolio</a>
-            <a class="link" href="./services.html">Services</a>
             <a class="link" href="./kontakt.html">Kontakt</a>
         </nav>
     </header>`;
@@ -25,9 +24,8 @@
             </div>
             <div class="footer-links">
                 <h4 class="footer-heading">Links</h4>
-                <a class="footer-link" href="./main.html">Home</a>
+                <a class="footer-link" href="./index.html">Home</a>
                 <a class="footer-link" href="./portfolio.html">Portfolio</a>
-                <a class="footer-link" href="./services.html">Services</a>
                 <a class="footer-link" href="./kontakt.html">Kontakt</a>
             </div>
             <div class="footer-socials">
@@ -60,7 +58,7 @@
         if (headerPlaceholder) {
             headerPlaceholder.outerHTML = headerHTML;
 
-            const page = window.location.pathname.split('/').pop() || 'main.html';
+            const page = window.location.pathname.split('/').pop() || 'index.html';
             document.querySelectorAll('.MenuBar .link').forEach(function (link) {
                 if (link.getAttribute('href') === './' + page) {
                     link.classList.add('active');
