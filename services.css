@@ -405,13 +405,50 @@
    RESPONSIVE — 480px
    =================================================== */
 @media (max-width: 480px) {
+    .services-hero {
+        padding: 60px 20px 40px;
+    }
     .services-hero h1 {
-        font-size: 32px;
+        font-size: 28px;
+    }
+    .service-cards {
+        padding: 0 20px 40px;
     }
     .service-cards .service-card {
         width: 100%;
     }
+    .zusatz {
+        padding: 40px 20px;
+    }
+    .zusatz h2 {
+        font-size: 24px;
+    }
+    .prozess {
+        padding: 0 20px 40px;
+    }
+    .prozess-inner {
+        padding: 28px 16px;
+    }
+    .prozess-inner h2 {
+        font-size: 24px;
+    }
     .prozess-steps {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr 1fr;
+        gap: 16px;
+    }
+    .prozess-number {
+        width: 48px;
+        height: 48px;
+        font-size: 15px;
+    }
+    .faq {
+        padding: 40px 20px 60px;
+    }
+    .faq h2 {
+        font-size: 24px;
+    }
+    .faq-question {
+        font-size: 14px;
+        padding: 16px 18px;
     }
 }

@@ -34,12 +34,7 @@
                 <a class="footer-link" href="https://www.facebook.com/david.angelucci.330" target="_blank">Facebook</a>
                 <a class="footer-link" href="https://www.tiktok.com/@dvdangelucci" target="_blank">TikTok</a>
             </div>
-            <div class="footer-legal">
-                <h4 class="footer-heading">Rechtliches</h4>
-                <a class="footer-link" href="./impressum.html">Impressum</a>
-                <a class="footer-link" href="./agb.html">AGB</a>
-                <a class="footer-link" href="./datenschutz.html">Datenschutz</a>
-            </div>
+
             <div class="footer-kontakt">
                 <h4 class="footer-heading">Kontakt</h4>
                 <p>Email: info@angeluccifilmmedia.at</p>
