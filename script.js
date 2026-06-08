@@ -1,7 +1,9 @@
 document.addEventListener('DOMContentLoaded', function () {
     // Vimeo thumbnails via oEmbed JSONP
-    document.querySelectorAll('.portfolio-thumb-img[data-vimeo-id]').forEach(function (thumb) {
-        var id = thumb.dataset.vimeoId;
+    // Hinweis: bewusst "data-thumb-id" statt "data-vimeo-id" – Letzteres lässt das
+    // Vimeo Player SDK das Element automatisch zu einem Live-Embed umwandeln.
+    document.querySelectorAll('.portfolio-thumb-img[data-thumb-id]').forEach(function (thumb) {
+        var id = thumb.dataset.thumbId;
         var cb = '_vt' + id;
 
         window[cb] = function (data) {
@@ -79,12 +81,29 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 });
 
+let vimeoPlayer = null;
+let vimeoSDKPromise = null;
+
+function loadVimeoSDK() {
+    if (window.Vimeo && window.Vimeo.Player) return Promise.resolve();
+    if (!vimeoSDKPromise) {
+        vimeoSDKPromise = new Promise(function (resolve, reject) {
+            const s = document.createElement('script');
+            s.src = 'https://player.vimeo.com/api/player.js';
+            s.onload = resolve;
+            s.onerror = reject;
+            document.head.appendChild(s);
+        });
+    }
+    return vimeoSDKPromise;
+}
+
 function openVideoModal(src) {
     const modal = document.getElementById('videoModal');
     if (!modal) return;
     const video = document.getElementById('modalVideo');
     const vimeoWrapper = document.getElementById('modalVimeoWrapper');
-    const vimeoIframe = document.getElementById('modalVimeo');
+    let vimeoIframe = document.getElementById('modalVimeo');
     const content = modal.querySelector('.video-modal-content');
 
     if (src.startsWith('vimeo:')) {
@@ -92,6 +111,18 @@ function openVideoModal(src) {
         const videoId = parts[1];
         const orientation = parts[2];
         if (video) video.style.display = 'none';
+
+        // vimeoPlayer.destroy() entfernt das iframe aus dem DOM – beim erneuten
+        // Öffnen muss es daher ggf. neu erstellt werden
+        if (!vimeoIframe && vimeoWrapper) {
+            vimeoIframe = document.createElement('iframe');
+            vimeoIframe.id = 'modalVimeo';
+            vimeoIframe.setAttribute('frameborder', '0');
+            vimeoIframe.setAttribute('allow', 'autoplay; fullscreen; picture-in-picture');
+            vimeoIframe.setAttribute('allowfullscreen', '');
+            vimeoWrapper.insertBefore(vimeoIframe, vimeoWrapper.firstChild);
+        }
+
         vimeoWrapper.style.display = 'block';
         vimeoIframe.src = `https://player.vimeo.com/video/${videoId}?badge=0&autopause=0&autoplay=1&player_id=0&app_id=58479`;
         if (orientation === 'portrait') {
@@ -101,6 +132,16 @@ function openVideoModal(src) {
             content.classList.remove('portrait-mode');
             vimeoWrapper.classList.remove('portrait');
         }
+
+        // Statt Vimeos "Mehr Videos"-Übersicht am Ende zeigen wir wieder das Thumbnail –
+        // dafür schließen wir das Modal einfach, sobald das Video durchgelaufen ist
+        loadVimeoSDK().then(function () {
+            if (vimeoPlayer) { vimeoPlayer.destroy().catch(function () {}); vimeoPlayer = null; }
+            vimeoPlayer = new Vimeo.Player(vimeoIframe);
+            vimeoPlayer.on('ended', function () {
+                closeVideoModal();
+            });
+        }).catch(function () {});
     } else {
         const source = document.getElementById('modalVideoSrc');
         if (vimeoWrapper) vimeoWrapper.style.display = 'none';
@@ -122,6 +163,7 @@ function closeVideoModal() {
     const content = modal.querySelector('.video-modal-content');
 
     if (video) video.pause();
+    if (vimeoPlayer) { vimeoPlayer.destroy().catch(function () {}); vimeoPlayer = null; }
     if (vimeoIframe) vimeoIframe.src = '';
     if (vimeoWrapper) { vimeoWrapper.style.display = 'none'; vimeoWrapper.classList.remove('portrait'); }
     content.classList.remove('portrait-mode');

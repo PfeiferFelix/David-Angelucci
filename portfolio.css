@@ -188,6 +188,19 @@
     .video-modal-content {
         width: 92vw;
     }
+    /* Schließen-Button überlappt sonst mit dem Hamburger-Menü im Header */
+    .video-modal-close {
+        top: 12px;
+        right: 12px;
+        width: 36px;
+        height: 36px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: rgba(0, 0, 0, 0.5);
+        border-radius: 50%;
+        z-index: 20;
+    }
 }
 
 /* ===================================================

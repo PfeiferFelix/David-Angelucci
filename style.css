@@ -220,7 +220,7 @@ header {
 
 .about-gallery {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     gap: 16px;
 }
 
@@ -265,78 +265,6 @@ header {
     color: #71717a;
     font-size: 13px;
     line-height: 1.5;
-}
-
-@media (max-width: 900px) {
-    /* Header & Hamburger */
-    header {
-        padding: 0 20px;
-        flex-wrap: wrap;
-        height: auto;
-        min-height: 60px;
-        position: sticky;
-        top: 0;
-        z-index: 100;
-    }
-    .logo img {
-        height: 100px;
-        width: auto;
-    }
-    .nav-toggle {
-        display: flex;
-    }
-    .MenuBar {
-        display: none;
-        flex-direction: column;
-        width: 100%;
-        gap: 0;
-        padding: 8px 0 16px;
-        border-top: 1px solid #27272a;
-    }
-    .MenuBar.open {
-        display: flex;
-    }
-    .MenuBar .link {
-        padding: 12px 4px;
-        font-size: 16px;
-    }
-
-    /* Hero */
-    .hero {
-        padding: 60px 24px 48px;
-        min-height: unset;
-    }
-    .hero-content {
-        flex-direction: column;
-        gap: 40px;
-        text-align: center;
-    }
-    .hero-text {
-        align-items: center;
-    }
-    .hero-content h1 {
-        font-size: 48px;
-    }
-    .hero-subtitle {
-        max-width: 100%;
-    }
-    .hero-buttons {
-        justify-content: center;
-        flex-wrap: wrap;
-    }
-    .hero_jpg {
-        width: 100%;
-        height: auto;
-        max-height: 420px;
-    }
-
-    /* About */
-    .about-container {
-        grid-template-columns: 1fr;
-        gap: 48px;
-    }
-    .about-portrait img { height: 480px; }
-    .about-title { font-size: 48px; }
 }
 
 /* ===== Über mich (eingebettet in main.html) ===== */
@@ -693,6 +621,7 @@ header {
 }
 
 .btn-primary {
+    display: inline-block;
     padding: 14px 28px;
     background-color: #15D1AA;
     color: white;
@@ -702,6 +631,7 @@ header {
     border: none;
     border-radius: 8px;
     cursor: pointer;
+    text-decoration: none;
     transition: background-color 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease;
     letter-spacing: 0.01em;
 }
@@ -722,6 +652,7 @@ header {
 }
 
 .btn-outline {
+    display: inline-block;
     padding: 14px 28px;
     background-color: transparent;
     color: white;
@@ -731,6 +662,7 @@ header {
     border: 1px solid rgba(255,255,255,0.3);
     border-radius: 8px;
     cursor: pointer;
+    text-decoration: none;
     transition: border-color 0.2s ease, color 0.2s ease, transform 0.15s ease;
     letter-spacing: 0.01em;
 }
@@ -1018,6 +950,16 @@ header {
     width: 100%;
     max-width: 1100px;
     margin: 16px 0 8px;
+}
+
+.services-grid-single {
+    grid-template-columns: minmax(0, 360px);
+    justify-content: center;
+}
+
+.services-grid-double {
+    grid-template-columns: repeat(2, minmax(0, 320px));
+    justify-content: center;
 }
 
 .service-card {
@@ -1506,6 +1448,81 @@ footer::before {
 }
 
 /* ===================================================
+   RESPONSIVE — 900px
+   =================================================== */
+@media (max-width: 900px) {
+    /* Header & Hamburger */
+    header {
+        padding: 0 20px;
+        flex-wrap: wrap;
+        height: auto;
+        min-height: 60px;
+        position: sticky;
+        top: 0;
+        z-index: 100;
+    }
+    .logo img {
+        height: 100px;
+        width: auto;
+    }
+    .nav-toggle {
+        display: flex;
+    }
+    .MenuBar {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        gap: 0;
+        padding: 8px 0 16px;
+        border-top: 1px solid #27272a;
+    }
+    .MenuBar.open {
+        display: flex;
+    }
+    .MenuBar .link {
+        padding: 12px 4px;
+        font-size: 16px;
+    }
+
+    /* Hero */
+    .hero {
+        padding: 60px 24px 48px;
+        min-height: unset;
+    }
+    .hero-content {
+        flex-direction: column;
+        gap: 40px;
+        text-align: center;
+    }
+    .hero-text {
+        align-items: center;
+    }
+    .hero-content h1 {
+        font-size: 48px;
+    }
+    .hero-subtitle {
+        max-width: 100%;
+    }
+    .hero-buttons {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    .hero_jpg {
+        width: 100%;
+        height: auto;
+        max-height: 420px;
+    }
+
+    /* About */
+    .about-container {
+        grid-template-columns: 1fr;
+        gap: 48px;
+    }
+    .about-portrait img { height: 480px; }
+    .about-title { font-size: 48px; }
+}
+
+/* ===================================================
    RESPONSIVE — 768px
    =================================================== */
 @media (max-width: 768px) {
@@ -1537,7 +1554,7 @@ footer::before {
         height: 360px;
     }
     .about-gallery {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
     }
     .about-gallery-caption {
         display: none;
