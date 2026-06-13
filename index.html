@@ -7,27 +7,28 @@
     <title>ESTEEMED videography</title>
     <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
     <script src="./script.js"></script>
+    <script src="./i18n.js" defer></script>
     <script src="./templates.js" defer></script>
     <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="./kontakt.css">
     <link rel="stylesheet" href="./services.css">
     <meta name="google-site-verification" content="yT45sd8DVkvFHuBk7lefocQ1dBLofSpP3MLH4PvmFL8" />
-    
+
 </head>
 
 <body>
-    
+
     <div id="header-placeholder"></div>
     <main>
 
         <section class="hero">
             <div class="hero-content">
                 <div class="hero-text">
-                    <h1>Deine Geschichte.<br><span class="hero-highlight">Professionell verfilmt.</span></h1>
-                    <p class="hero-subtitle">Professionelle Videografie aus Österreich für Unternehmen und besondere Anlässe</p>
+                    <h1><span data-i18n="hero.title1">Deine Geschichte.</span><br><span class="hero-highlight" data-i18n="hero.title2">Professionell verfilmt.</span></h1>
+                    <p class="hero-subtitle" data-i18n="hero.subtitle">Professionelle Videografie aus Österreich für Unternehmen und besondere Anlässe</p>
                     <div class="hero-buttons">
-                        <a href="./portfolio.html" class="btn-primary">Portfolio ansehen <span class="arrow">→</span></a>
-                        <a href="./kontakt.html" class="btn-outline">Anfrage senden</a>
+                        <a href="./portfolio.html" class="btn-primary"><span data-i18n="hero.btn.portfolio">Portfolio ansehen</span> <span class="arrow">→</span></a>
+                        <a href="./kontakt.html" class="btn-outline" data-i18n="hero.btn.contact">Anfrage senden</a>
                     </div>
                 </div>
                 <div class="hero-image-wrapper">
@@ -41,34 +42,34 @@
         <section class="about-section">
             <div class="about-container">
                 <div class="about-portrait">
-                    <img src="./images/PHOTO-2026-06-06-13-06-59.jpg" alt="David Angelucci">
-                    <span class="about-badge">Videograf · Österreich</span>
+                    <img src="./images/Ich Bin David.jpeg" alt="David Angelucci">
+                    <span class="about-badge" data-i18n="about.badge">Videograf · Österreich</span>
                 </div>
                 <div class="about-content">
-                    <span class="about-eyebrow">Über mich</span>
-                    <h2 class="about-title">Hi, ich bin<br><span class="about-highlight">David!</span></h2>
-                    <p class="about-desc">Seit meiner Kindheit fasziniert mich die Videografie und die Möglichkeit, besondere Momente für die Ewigkeit festzuhalten. Mit einem Auge fürs Detail und viel Leidenschaft erzähle ich Geschichten durch bewegte Bilder.</p>
+                    <span class="about-eyebrow" data-i18n="about.eyebrow">Über mich</span>
+                    <h2 class="about-title"><span data-i18n="about.title">Ich bin</span><br><span class="about-highlight">David!</span></h2>
+                    <p class="about-desc" data-i18n="about.desc">Videografie ist für mich mehr als ein Beruf – es ist die Möglichkeit, Momente für immer festzuhalten und Geschichten zu erzählen, die wirklich bewegen. Mit einem Auge fürs Detail und viel Leidenschaft bringe ich jede Vision auf den Punkt.</p>
                     <div class="about-divider"></div>
                     <div class="about-gallery">
                         <div class="about-gallery-item">
                             <img src="./images/davidWasser.png" alt="Underwater">
                             <div class="about-gallery-caption">
-                                <h4>Meine Einstellung</h4>
-                                <p>Leidenschaft und Passion in jedem Projekt.</p>
+                                <h4 data-i18n="about.gallery1.title">Meine Einstellung</h4>
+                                <p data-i18n="about.gallery1.desc">Leidenschaft und Passion in jedem Projekt.</p>
                             </div>
                         </div>
                         <div class="about-gallery-item">
                             <img src="./images/davidUrlaub.png" alt="David Urlaub">
                             <div class="about-gallery-caption">
-                                <h4>Die Vision</h4>
-                                <p>Videos, die Geschichten erzählen und Emotionen wecken.</p>
+                                <h4 data-i18n="about.gallery2.title">Die Vision</h4>
+                                <p data-i18n="about.gallery2.desc">Videos, die Geschichten erzählen und Emotionen wecken.</p>
                             </div>
                         </div>
                         <div class="about-gallery-item">
                             <img src="./images/David.png" alt="David Angelucci Portrait">
                             <div class="about-gallery-caption">
-                                <h4>Persönlich</h4>
-                                <p>Mit Leidenschaft, Sorgfalt und einem offenen Ohr für deine Wünsche bei jedem Projekt dabei.</p>
+                                <h4 data-i18n="about.gallery3.title">Persönlich</h4>
+                                <p data-i18n="about.gallery3.desc">Mit Leidenschaft, Sorgfalt und einem offenen Ohr für deine Wünsche bei jedem Projekt dabei.</p>
                             </div>
                         </div>
                     </div>
@@ -82,86 +83,65 @@
         <section class="stats-section">
             <div class="stats-inner">
                 <div class="stat-item">
-                    <div class="stat-number">20+</div>
-                    <div class="stat-label">Abgeschlossene Projekte</div>
-                </div>
-                <div class="stat-divider"></div>
-                <div class="stat-item">
                     <div class="stat-number">10+</div>
-                    <div class="stat-label">Zufriedene Kunden</div>
+                    <div class="stat-label" data-i18n="stats.clients">Zufriedene Kunden</div>
                 </div>
                 <div class="stat-divider"></div>
                 <div class="stat-item">
-                    <div class="stat-number">2+</div>
-                    <div class="stat-label">Jahre Erfahrung</div>
+                    <div class="stat-number">1,5</div>
+                    <div class="stat-label" data-i18n="stats.experience">Jahre Erfahrung</div>
                 </div>
                 <div class="stat-divider"></div>
                 <div class="stat-item">
-                    <div class="stat-number">4K</div>
-                    <div class="stat-label">Videoqualität</div>
+                    <div class="stat-number">4K–6K</div>
+                    <div class="stat-label" data-i18n="stats.quality">Videoqualität</div>
                 </div>
             </div>
         </section>
+
         <!-- Kunden Logos -->
         <section class="clients-section">
-            <h2 class="section-title clients-title">Kunden die mir vertrauen</h2>
+            <h2 class="section-title clients-title" data-i18n="clients.title">Kunden die mir vertrauen</h2>
             <div class="clients-logos">
                 <img src="./images/logo 2_0000.png" alt="Hütter" class="client-logo">
                 <img src="./images/LoScoglio.jpg" alt="Lo Scoglio" class="client-logo">
                 <img src="./images/oggi.png" alt="Oggi" class="client-logo">
                 <img src="./images/Yoto.jpg" alt="Yoto" class="client-logo">
+                <img src="./images/Color logo with background.png" alt="Kunde" class="client-logo">
             </div>
         </section>
 
      <!-- Meine Werte -->
         <section class="values-section">
-            <span class="section-eyebrow">Was mich antreibt</span>
-            <h2 class="section-title">Meine Werte</h2>
+            <span class="section-eyebrow" data-i18n="values.eyebrow">Was mich antreibt</span>
+            <h2 class="section-title" data-i18n="values.title">Meine Werte</h2>
             <div class="values-grid">
                 <div class="value-card">
                     <span class="value-number">01</span>
                     <div class="value-icon"><img src="./images/cam.png" alt="Professionalität"></div>
-                    <h3>Professionalität</h3>
-                    <p>Modernste Technik und jahrelange Erfahrung garantieren höchste Qualität in jedem Projekt.</p>
+                    <h3 data-i18n="values.1.title">Professionalität</h3>
+                    <p data-i18n="values.1.desc">Modernste Technik und jahrelange Erfahrung garantieren höchste Qualität in jedem Projekt.</p>
                 </div>
                 <div class="value-card">
                     <span class="value-number">02</span>
                     <div class="value-icon"><img src="./images/Heart.png" alt="Leidenschaft"></div>
-                    <h3>Leidenschaft</h3>
-                    <p>Jedes Projekt ist einzigartig und wird mit vollster Hingabe und Liebe zum Detail umgesetzt.</p>
+                    <h3 data-i18n="values.2.title">Leidenschaft</h3>
+                    <p data-i18n="values.2.desc">Jedes Projekt ist einzigartig und wird mit vollster Hingabe und Liebe zum Detail umgesetzt.</p>
                 </div>
                 <div class="value-card">
                     <span class="value-number">03</span>
                     <div class="value-icon"><img src="./images/film.png" alt="Kreativität"></div>
-                    <h3>Kreativität</h3>
-                    <p>Innovative Perspektiven und cineastische Ästhetik machen jeden Frame zu einem Erlebnis.</p>
+                    <h3 data-i18n="values.3.title">Kreativität</h3>
+                    <p data-i18n="values.3.desc">Innovative Perspektiven und cineastische Ästhetik machen jeden Frame zu einem Erlebnis.</p>
                 </div>
             </div>
         </section>
-            <!-- Equipment -->
-        <section class="equipment-section">
-            <div class="equipment-inner">
-                <span class="section-eyebrow">Womit ich arbeite</span>
-                <h2 class="section-title">Mein Equipment</h2>
-                <p class="section-subtitle">Ich arbeite ausschließlich mit professionellem Equipment für die bestmögliche Qualität</p>
-                <div class="equipment-grid">
-                    <div class="equipment-item"><span class="equip-dot"></span><span>Sony FX6 Cinema Camera</span></div>
-                    <div class="equipment-item"><span class="equip-dot"></span><span>Sony A7S III</span></div>
-                    <div class="equipment-item"><span class="equip-dot"></span><span>DJI Mavic 3 Pro Drohne</span></div>
-                    <div class="equipment-item"><span class="equip-dot"></span><span>Gimbal Stabilisatoren</span></div>
-                    <div class="equipment-item"><span class="equip-dot"></span><span>Professionelle Audio-Ausstattung</span></div>
-                    <div class="equipment-item"><span class="equip-dot"></span><span>LED Licht-Equipment</span></div>
-                    <div class="equipment-item"><span class="equip-dot"></span><span>DJI Osmo Pocket 3</span></div>
-                    <div class="equipment-item"><span class="equip-dot"></span><span>DaVinci Resolve</span></div>
-                    <div class="equipment-item"><span class="equip-dot"></span><span>Osmo 360°</span></div>
-                </div>
-            </div>
-        </section>
+
         <!-- Meine Leistungen -->
-        <section class="services-preview-section">
-            <span class="section-eyebrow">Was ich anbiete</span>
-            <h2 class="section-title">Meine Leistungen</h2>
-            <p class="section-subtitle">Professionelle Unternehmens- und Eventvideos – ich bringe deine Geschichte zum Leben</p>
+        <section class="services-preview-section" id="leistungen">
+            <span class="section-eyebrow" data-i18n="services.eyebrow">Was ich anbiete</span>
+            <h2 class="section-title" data-i18n="services.title">Meine Leistungen</h2>
+            <p class="section-subtitle" data-i18n="services.subtitle">Professionelle Unternehmens- und Eventvideos – ich bringe deine Geschichte zum Leben</p>
             <div class="services-grid services-grid-double">
                 <div class="service-card fade-in">
                     <div class="service-icon">
@@ -169,8 +149,17 @@
                             <rect x="2" y="7" width="28" height="18" rx="2"/><polygon points="13,12 13,20 21,16" fill="#15D1AA" stroke="none"/>
                         </svg>
                     </div>
-                    <h3>Unternehmensvideos</h3>
-                    <p>Professionelle Imagevideos die deine Marke und Botschaft zum Leben erwecken.</p>
+                    <h3 data-i18n="services.1.title">Unternehmensvideos</h3>
+                    <p data-i18n="services.1.desc">Professionelle Imagevideos die deine Marke und Botschaft zum Leben erwecken.</p>
+                </div>
+                <div class="service-card fade-in">
+                    <div class="service-icon">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" stroke="#15D1AA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="9" y="2" width="14" height="28" rx="3"/><line x1="13" y1="6" x2="19" y2="6"/><circle cx="16" cy="24" r="1.5" fill="#15D1AA" stroke="none"/>
+                        </svg>
+                    </div>
+                    <h3 data-i18n="services.2.title">Reels / Social-Media-Content</h3>
+                    <p data-i18n="services.2.desc">Aufmerksamkeitsstarke Kurzvideos und Reels, die deine Reichweite auf Social Media maximieren.</p>
                 </div>
                 <div class="service-card fade-in">
                     <div class="service-icon">
@@ -178,111 +167,116 @@
                             <rect x="4" y="6" width="24" height="22" rx="2"/><line x1="4" y1="13" x2="28" y2="13"/><line x1="10" y1="3" x2="10" y2="8"/><line x1="22" y1="3" x2="22" y2="8"/>
                         </svg>
                     </div>
-                    <h3>Eventfilm</h3>
-                    <p>Lebendige Eventfilme, die die Atmosphäre und besonderen Momente deiner Veranstaltung authentisch einfangen.</p>
+                    <h3 data-i18n="services.3.title">Eventfilme</h3>
+                    <p data-i18n="services.3.desc">Lebendige Eventfilme, die die Atmosphäre und besonderen Momente deiner Veranstaltung authentisch einfangen.</p>
+                </div>
+                <div class="service-card fade-in">
+                    <div class="service-icon">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" stroke="#15D1AA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M16 28 C16 28 4 20 4 12 C4 8 7 5 10 5 C12.5 5 14.5 6.5 16 8.5 C17.5 6.5 19.5 5 22 5 C25 5 28 8 28 12 C28 20 16 28 16 28Z" fill="rgba(21,209,170,0.15)"/>
+                        </svg>
+                    </div>
+                    <h3 data-i18n="services.4.title">Hochzeitsfilme</h3>
+                    <p data-i18n="services.4.desc">Emotionale und zeitlose Hochzeitsfilme, die den schönsten Tag deines Lebens unvergesslich machen.</p>
                 </div>
             </div>
         </section>
-
-   
-
-        <!-- Arbeitsprozess -->
-        <section class="prozess">
-            <div class="prozess-inner">
-                <h2>Mein Arbeitsprozess</h2>
-                <div class="prozess-steps">
-                    <div class="prozess-step">
-                        <div class="prozess-number">01</div>
-                        <h3>Erstgespräch</h3>
-                        <p>Wir besprechen deine Wünsche und Vorstellungen</p>
-                    </div>
-                    <div class="prozess-step">
-                        <div class="prozess-number">02</div>
-                        <h3>Planung</h3>
-                        <p>Ich erstelle ein individuelles Konzept für dein Projekt</p>
-                    </div>
-                    <div class="prozess-step">
-                        <div class="prozess-number">03</div>
-                        <h3>Produktion</h3>
-                        <p>Professionelle Aufnahmen am Tag deiner Veranstaltung</p>
-                    </div>
-                    <div class="prozess-step">
-                        <div class="prozess-number">04</div>
-                        <h3>Bearbeitung</h3>
-                        <p>Sorgfältige Nachbearbeitung und finaler Feinschliff</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-    
 
         <!-- Zusatzleistungen -->
         <section class="zusatz">
-            <h2>Zusatzleistungen</h2>
+            <h2 data-i18n="extras.title">Zusatzleistungen</h2>
             <div class="zusatz-grid">
                 <div class="zusatz-card">
                     <img src="./images/clock.png" alt="Uhr" class="service-icon">
-                    <h3>Express-Bearbeitung</h3>
-                    <p>Dein Video in nur 7 Tagen fertig</p>
+                    <h3 data-i18n="extras.1.title">Express-Bearbeitung</h3>
+                    <p data-i18n="extras.1.desc">Dein Video in nur 7 Tagen fertig</p>
                     <span class="zusatz-price">ab 300€</span>
                 </div>
                 <div class="zusatz-card">
                     <img src="./images/people.png" alt="Personen" class="service-icon">
-                    <h3>Zweiter Kameramann</h3>
-                    <p>Für noch mehr Perspektiven</p>
+                    <h3 data-i18n="extras.2.title">Zweiter Kameramann</h3>
+                    <p data-i18n="extras.2.desc">Für noch mehr Perspektiven</p>
                     <span class="zusatz-price">ab 400€</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Arbeitsprozess -->
+        <section class="prozess">
+            <div class="prozess-inner">
+                <h2 data-i18n="process.title">Mein Arbeitsprozess</h2>
+                <div class="prozess-steps">
+                    <div class="prozess-step">
+                        <div class="prozess-number">01</div>
+                        <h3 data-i18n="process.1.title">Erstgespräch</h3>
+                        <p data-i18n="process.1.desc">Wir besprechen deine Wünsche und Vorstellungen</p>
+                    </div>
+                    <div class="prozess-step">
+                        <div class="prozess-number">02</div>
+                        <h3 data-i18n="process.2.title">Planung</h3>
+                        <p data-i18n="process.2.desc">Ich erstelle ein individuelles Konzept für dein Projekt</p>
+                    </div>
+                    <div class="prozess-step">
+                        <div class="prozess-number">03</div>
+                        <h3 data-i18n="process.3.title">Produktion</h3>
+                        <p data-i18n="process.3.desc">Professionelle Aufnahmen am Tag deiner Veranstaltung</p>
+                    </div>
+                    <div class="prozess-step">
+                        <div class="prozess-number">04</div>
+                        <h3 data-i18n="process.4.title">Bearbeitung</h3>
+                        <p data-i18n="process.4.desc">Sorgfältige Nachbearbeitung und finaler Feinschliff</p>
+                    </div>
                 </div>
             </div>
         </section>
 
         <!-- FAQ -->
         <section class="faq">
-            <h2>Häufige Fragen</h2>
+            <h2 data-i18n="faq.title">Häufige Fragen</h2>
             <div class="faq-list">
                 <div class="faq-item">
                     <button class="faq-question" onclick="toggleFaq(this)">
-                        <span>Wie lange dauert die Bearbeitung?</span>
+                        <span data-i18n="faq.1.q">Wie lange dauert die Bearbeitung?</span>
                         <span class="faq-arrow">›</span>
                     </button>
                     <div class="faq-answer">
-                        <p>In der Regel dauert die Bearbeitung 4–6 Wochen nach der Veranstaltung. Express-Bearbeitung ist gegen Aufpreis möglich.</p>
+                        <p data-i18n="faq.1.a">In der Regel dauert die Bearbeitung 4–6 Wochen nach der Veranstaltung. Express-Bearbeitung ist gegen Aufpreis möglich.</p>
                     </div>
                 </div>
                 <div class="faq-item">
                     <button class="faq-question" onclick="toggleFaq(this)">
-                        <span>Kann ich das Paket individuell anpassen?</span>
+                        <span data-i18n="faq.2.q">Kann ich das Paket individuell anpassen?</span>
                         <span class="faq-arrow">›</span>
                     </button>
                     <div class="faq-answer">
-                        <p>Ja, alle Pakete sind individuell anpassbar. Kontaktiere mich einfach und wir besprechen gemeinsam, was für dich am besten passt.</p>
+                        <p data-i18n="faq.2.a">Ja, alle Pakete sind individuell anpassbar. Kontaktiere mich einfach und wir besprechen gemeinsam, was für dich am besten passt.</p>
                     </div>
                 </div>
                 <div class="faq-item">
                     <button class="faq-question" onclick="toggleFaq(this)">
-                        <span>Wie erhalte ich das fertige Video?</span>
+                        <span data-i18n="faq.3.q">Wie erhalte ich das fertige Video?</span>
                         <span class="faq-arrow">›</span>
                     </button>
                     <div class="faq-answer">
-                        <p>Das fertige Video wird dir über eine Online-Galerie zum Download bereitgestellt. Optional ist auch eine Lieferung auf USB möglich.</p>
+                        <p data-i18n="faq.3.a">Das fertige Video wird dir über eine Online-Galerie zum Download bereitgestellt. Optional ist auch eine Lieferung auf USB möglich.</p>
                     </div>
                 </div>
                 <div class="faq-item">
                     <button class="faq-question" onclick="toggleFaq(this)">
-                        <span>Wie weit im Voraus sollte ich buchen?</span>
+                        <span data-i18n="faq.4.q">Wie weit im Voraus sollte ich buchen?</span>
                         <span class="faq-arrow">›</span>
                     </button>
                     <div class="faq-answer">
-                        <p>Ich empfehle, so früh wie möglich zu buchen – besonders für größere Projekte mindestens 6–12 Monate im Voraus, da beliebte Termine schnell vergeben sind.</p>
+                        <p data-i18n="faq.4.a">Ich empfehle, so früh wie möglich zu buchen – besonders für größere Projekte mindestens 6–12 Monate im Voraus, da beliebte Termine schnell vergeben sind.</p>
                     </div>
                 </div>
                 <div class="faq-item">
                     <button class="faq-question" onclick="toggleFaq(this)">
-                        <span>Welche Geräte verwendest du?</span>
+                        <span data-i18n="faq.5.q">Welche Geräte verwendest du?</span>
                         <span class="faq-arrow">›</span>
                     </button>
                     <div class="faq-answer">
-                        <p>Ich arbeite mit professionellen Kamera-Systemen, Stabilisatoren und Drohnen für gestochen scharfe 4K-Aufnahmen aus allen Perspektiven.</p>
+                        <p data-i18n="faq.5.a">Ich arbeite mit professionellen Kamera-Systemen, Stabilisatoren und Drohnen für gestochen scharfe 4K-Aufnahmen aus allen Perspektiven.</p>
                     </div>
                 </div>
             </div>
@@ -291,10 +285,10 @@
         <!-- CTA -->
         <section class="cta-section">
             <div class="cta-card">
-                <span class="section-eyebrow">Lass uns starten</span>
-                <h2 class="cta-title fade-in">Bereit für dein Projekt?</h2>
-                <p class="cta-desc fade-in">Lass uns gemeinsam etwas Außergewöhnliches schaffen. Kontaktiere mich für ein unverbindliches Beratungsgespräch.</p>
-                <a href="./kontakt.html" class="cta-btn fade-in">Jetzt Kontakt aufnehmen <span class="arrow">→</span></a>
+                <span class="section-eyebrow" data-i18n="cta.eyebrow">Lass uns starten</span>
+                <h2 class="cta-title fade-in" data-i18n="cta.title">Bereit für dein Projekt?</h2>
+                <p class="cta-desc fade-in" data-i18n="cta.desc">Lass uns gemeinsam etwas Außergewöhnliches schaffen. Kontaktiere mich für ein unverbindliches Beratungsgespräch.</p>
+                <a href="./kontakt.html" class="cta-btn fade-in"><span data-i18n="cta.btn">Jetzt Kontakt aufnehmen</span> <span class="arrow">→</span></a>
             </div>
         </section>
     </main>
