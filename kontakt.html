@@ -6,6 +6,7 @@
     <title>ESTEEMED videography</title>
     <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
     <script src="./script.js" defer></script>
+    <script src="./i18n.js" defer></script>
     <script src="./templates.js" defer></script>
     <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="./kontakt.css">
@@ -16,60 +17,65 @@
     <div id="successPopup" class="popup-overlay">
         <div class="popup-box">
             <div class="popup-icon">✓</div>
-            <h3>Danke für deine Anfrage!</h3>
-            <p>Du wirst in kürze von mir hören.</p>
-            <button class="popup-close" onclick="closePopup()">Schließen</button>
+            <h3 data-i18n="contact.popup.title">Danke für deine Anfrage!</h3>
+            <p data-i18n="contact.popup.text">Du wirst in kürze von mir hören.</p>
+            <button class="popup-close" onclick="closePopup()" data-i18n="contact.popup.close">Schließen</button>
         </div>
     </div>
 
     <main>
         <div class="KontaktSectionHead">
-            <h2 class="headlineKontakt">Kontaktiere mich</h2>
-            <span class="kontaktText">Lass uns über dein Projekt sprechen. Ich freu mich über deine Nachricht.</span>
+            <h2 class="headlineKontakt" data-i18n="contact.headline">Kontaktiere mich</h2>
+            <span class="kontaktText" data-i18n="contact.subtext">Lass uns über dein Projekt sprechen. Ich freu mich über deine Nachricht.</span>
         </div>
 
         <div class="kontakt-grid">
             <!-- Left: Form -->
             <div class="kontakt-form-card">
-                <h3 class="form-title">Anfrage senden</h3>
-                <form class="kontakt-form" action="https://formspree.io/f/mkoqykaw" method="POST">
+                <h3 class="form-title" data-i18n="contact.form.title">Anfrage senden</h3>
+                <form class="kontakt-form" id="kontaktForm" action="https://formspree.io/f/mkoqykaw" method="POST" novalidate>
                     <div class="form-group">
-                        <label>Name *</label>
-                        <input type="text" name="name" placeholder="Dein Name">
+                        <label data-i18n="contact.form.name">Name *</label>
+                        <input type="text" name="name" id="fieldName" data-i18n-placeholder="contact.form.name.placeholder" placeholder="Dein Name">
+                        <span class="error-msg" id="errorName" data-i18n="error.name">Bitte Namen eingeben.</span>
                     </div>
                     <div class="form-group">
-                        <label>Email *</label>
-                        <input type="email" name="email" placeholder="deine@email.com">
+                        <label data-i18n="contact.form.email">Email *</label>
+                        <input type="email" name="email" id="fieldEmail" placeholder="deine@email.com">
+                        <span class="error-msg" id="errorEmail" data-i18n="error.email.invalid">Bitte eine gültige E-Mail-Adresse eingeben.</span>
                     </div>
                     <div class="form-group">
-                        <label>Telefon</label>
-                        <input type="tel" name="telefon" placeholder="+43 123 456 789">
+                        <label data-i18n="contact.form.phone">Telefon</label>
+                        <input type="tel" name="telefon" placeholder="+43 660 900 5151">
                     </div>
                     <div class="form-group">
-                        <label>Service *</label>
-                        <select name="service">
-                            <option value="" disabled selected>Bitte auswählen</option>
-                            <option>Unternehmensvideo</option>
-                            <option>Eventfilm</option>
-                            <option>Sonstiges</option>
+                        <label data-i18n="contact.form.service">Service *</label>
+                        <select name="service" id="fieldService">
+                            <option value="" disabled selected data-i18n="contact.form.service.placeholder">Bitte auswählen</option>
+                            <option value="Unternehmensvideos" data-i18n="contact.form.service.1">Unternehmensvideos</option>
+                            <option value="Reels / Social-Media-Content" data-i18n="contact.form.service.2">Reels / Social-Media-Content</option>
+                            <option value="Eventfilme" data-i18n="contact.form.service.3">Eventfilme</option>
+                            <option value="Hochzeitsvideo" data-i18n="contact.form.service.4">Hochzeitsvideo</option>
+                            <option value="Sonstiges" data-i18n="contact.form.service.5">Sonstiges</option>
                         </select>
+                        <span class="error-msg" id="errorService" data-i18n="error.service">Bitte einen Service auswählen.</span>
                     </div>
                     <div class="form-group">
-                        <label>Gewünschter Termin</label>
+                        <label data-i18n="contact.form.date">Gewünschter Termin</label>
                         <input type="date" name="termin">
                     </div>
                     <div class="form-group">
-                        <label>Nachricht *</label>
-                        <textarea name="nachricht" placeholder="Erzähle mir mehr über dein Projekt..."></textarea>
+                        <label data-i18n="contact.form.message">Nachricht</label>
+                        <textarea name="nachricht" data-i18n-placeholder="contact.form.message.placeholder" placeholder="Erzähle mir mehr über dein Projekt..."></textarea>
                     </div>
                     <button type="submit" class="form-submit">
-                        Nachricht senden
+                        <span data-i18n="contact.form.submit">Nachricht senden</span>
                         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                             <line x1="22" y1="2" x2="11" y2="13"></line>
                             <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
                         </svg>
                     </button>
-                    <p class="form-note">*Ich antworte in der Regel innerhalb von 24 Stunden.</p>
+                    <p class="form-note" data-i18n="contact.form.note">*Ich antworte in der Regel innerhalb von 24 Stunden.</p>
                 </form>
             </div>
 
@@ -79,39 +85,39 @@
                     <img class="info-icon-img" src="./images/SCR-20260311-owki.png" alt="Email">
                     <div class="info-text">
                         <span class="info-label">Email</span>
-                        <span class="info-value">info@angeluccifilmmedia.at</span>
+                        <span class="info-value">info@esteemed-videography.com</span>
                     </div>
                 </div>
 
                 <div class="cardTelefon info-card">
                     <img class="info-icon-img" src="./images/SCR-20260311-ownb.png" alt="Telefon">
                     <div class="info-text">
-                        <span class="info-label">Telefon</span>
-                        <span class="info-value">+43 123 456 789</span>
+                        <span class="info-label" data-i18n="contact.info.phone.label">Telefon</span>
+                        <span class="info-value">+43 660 900 5151</span>
                     </div>
                 </div>
 
                 <div class="cardStandort info-card">
                     <img class="info-icon-img" src="./images/SCR-20260311-owpw.png" alt="Standort">
                     <div class="info-text">
-                        <span class="info-label">Standort</span>
-                        <span class="info-value">Österreich</span>
+                        <span class="info-label" data-i18n="contact.info.location.label">Standort</span>
+                        <span class="info-value" data-i18n="contact.info.location">Österreich</span>
                     </div>
                 </div>
 
                 <div class="cardVerfügbarkeit">
-                    <span class="verfug-title">Verfügbarkeit</span>
+                    <span class="verfug-title" data-i18n="contact.availability.title">Verfügbarkeit</span>
                     <div class="verfug-row">
-                        <span class="verfug-day">Montag – Freitag:</span>
+                        <span class="verfug-day" data-i18n="contact.availability.weekdays">Montag – Freitag:</span>
                         <span class="verfug-time">9:00 – 18:00</span>
                     </div>
                     <div class="verfug-row">
-                        <span class="verfug-day">Samstag:</span>
-                        <span class="verfug-time">Nach Vereinbarung</span>
+                        <span class="verfug-day" data-i18n="contact.availability.saturday">Samstag:</span>
+                        <span class="verfug-time" data-i18n="contact.availability.appointment">Nach Vereinbarung</span>
                     </div>
                     <div class="verfug-row last">
-                        <span class="verfug-day">Sonntag:</span>
-                        <span class="verfug-time">Nach Vereinbarung</span>
+                        <span class="verfug-day" data-i18n="contact.availability.sunday">Sonntag:</span>
+                        <span class="verfug-time" data-i18n="contact.availability.appointment">Nach Vereinbarung</span>
                     </div>
                 </div>
 
@@ -120,5 +126,98 @@
     </main>
 
     <div id="footer-placeholder"></div>
+
+    <script>
+        (function () {
+            var form = document.getElementById('kontaktForm');
+            if (!form) return;
+
+            function isValidEmail(value) {
+                if (!value.includes('@')) return false;
+                if (value.includes('..')) return false;
+                var parts = value.split('@');
+                if (parts.length !== 2) return false;
+                var local = parts[0];
+                var domain = parts[1];
+                if (!local || !domain || !domain.includes('.')) return false;
+                return true;
+            }
+
+            function t(key) {
+                return window.i18n ? window.i18n.t(key) : key;
+            }
+
+            function setError(field, errorEl, message) {
+                field.classList.add('input-error');
+                errorEl.textContent = message;
+                errorEl.classList.add('visible');
+            }
+
+            function clearError(field, errorEl) {
+                field.classList.remove('input-error');
+                errorEl.classList.remove('visible');
+            }
+
+            var fieldName    = document.getElementById('fieldName');
+            var fieldEmail   = document.getElementById('fieldEmail');
+            var fieldService = document.getElementById('fieldService');
+            var errorName    = document.getElementById('errorName');
+            var errorEmail   = document.getElementById('errorEmail');
+            var errorService = document.getElementById('errorService');
+
+            fieldName.addEventListener('input', function () {
+                if (this.value.trim()) clearError(this, errorName);
+            });
+
+            fieldEmail.addEventListener('input', function () {
+                if (isValidEmail(this.value.trim())) clearError(this, errorEmail);
+            });
+
+            fieldService.addEventListener('change', function () {
+                if (this.value) clearError(this, errorService);
+            });
+
+            form.addEventListener('submit', function (e) {
+                var hasError = false;
+
+                if (!fieldName.value.trim()) {
+                    setError(fieldName, errorName, t('error.name'));
+                    hasError = true;
+                } else {
+                    clearError(fieldName, errorName);
+                }
+
+                var emailVal = fieldEmail.value.trim();
+                if (!emailVal) {
+                    setError(fieldEmail, errorEmail, t('error.email.required'));
+                    hasError = true;
+                } else if (!emailVal.includes('@')) {
+                    setError(fieldEmail, errorEmail, t('error.email.at'));
+                    hasError = true;
+                } else if (emailVal.includes('..')) {
+                    setError(fieldEmail, errorEmail, t('error.email.dots'));
+                    hasError = true;
+                } else if (!isValidEmail(emailVal)) {
+                    setError(fieldEmail, errorEmail, t('error.email.invalid'));
+                    hasError = true;
+                } else {
+                    clearError(fieldEmail, errorEmail);
+                }
+
+                if (!fieldService.value) {
+                    setError(fieldService, errorService, t('error.service'));
+                    hasError = true;
+                } else {
+                    clearError(fieldService, errorService);
+                }
+
+                if (hasError) {
+                    e.preventDefault();
+                    var firstError = form.querySelector('.input-error');
+                    if (firstError) firstError.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                }
+            });
+        })();
+    </script>
 </body>
 </html>
